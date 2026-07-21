@@ -11,4 +11,4 @@ qa/
 _archive/
 .claude/
 .playwright-mcp/
-qa-*.png
+qa*.png
