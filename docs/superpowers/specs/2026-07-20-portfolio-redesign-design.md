@@ -23,7 +23,7 @@ Decisión explícita del usuario: **empezar 100% de cero** (código y contenido 
 | Contenido | Sale del CV 2026 (`joaquin-haro-filippon-salesforce-cv-2026.pdf`) sin novedades adicionales. No se inventa nada. |
 | Hosting | Netlify, mismo sitio/dominio actual. Deploy automático desde GitHub (`main`). |
 | Formulario | Netlify Forms + honeypot. Sin backend propio. |
-| Código de mayo | Se archiva en un zip (`_archive/portfolio-mayo-2026.zip` o equivalente fuera del repo) antes de limpiar. No se borra sin backup. |
+| Código de mayo | Se archiva en `_archive/portfolio-mayo-2026.zip` (carpeta ignorada por git) antes de limpiar la carpeta. No se borra nada sin backup. |
 
 ## 3. Estructura del sitio (one-page)
 
@@ -48,7 +48,7 @@ Extras: página **404 bilingüe** con link de vuelta; CV PDF servido desde `/doc
 - `hreflang` alternates + canonical en el `<head>`. Sitemap con ambos idiomas.
 
 ### Capa de datos
-- Todo el contenido (EN y ES) vive en `src/data/` tipado con TypeScript (`content.ts` o similar): un objeto por locale con el mismo shape, `as const`, tipo compartido. Links y datos de contacto centralizados.
+- Todo el contenido (EN y ES) vive en `src/data/content.ts` tipado con TypeScript: un objeto por locale con el mismo shape, `as const`, tipo compartido. Links y datos de contacto centralizados en el mismo módulo.
 - Los componentes solo reciben/leen datos tipados; cambiar textos nunca toca componentes.
 
 ### Componentes (uno por responsabilidad)
@@ -57,7 +57,7 @@ Extras: página **404 bilingüe** con link de vuelta; CV PDF servido desde `/doc
 ### Tokens de diseño (Tailwind 4 `@theme`, un solo lugar)
 - Navy: `#032D60` (hero band, headings) · Azul: `#0176D3` (CTAs, links, acentos) · Azul hover: `#014486` · Tinta: `#181818` · Gris texto secundario: `#5B6B79` · Bordes: `#E4EAF0` · Fondos: blanco y `#F8FAFC`.
 - Sin gradientes decorativos, sin sombras fuertes (máximo una sombra sutil en cards).
-- Tipografía: **Inter variable self-hosted** (woff2 en `public/fonts/` o vía Fonts API de Astro; sin requests a Google).
+- Tipografía: **Inter variable self-hosted**: woff2 en `public/fonts/` + `@font-face` en el CSS global con `font-display: swap`. Sin requests a Google Fonts.
 
 ### Assets
 - `astro:assets` para imágenes optimizadas. Imagen OG estática por idioma (1200×630, navy + texto). Favicon SVG nuevo (monograma "JH" navy/azul).
@@ -71,7 +71,7 @@ Extras: página **404 bilingüe** con link de vuelta; CV PDF servido desde `/doc
 ## 6. Deploy y ciclo de vida
 
 1. `git init` + primer commit con este spec (hecho al aprobar el diseño).
-2. Repo público en GitHub (cuenta Keromon2k19), p. ej. `portfolio-2026`.
+2. Repo público `portfolio-2026` en GitHub (cuenta Keromon2k19).
 3. Netlify conectado al repo: push a `main` → build (`npm run build`) → deploy al dominio existente `joaquinharofilipponportfolio.netlify.app`.
 4. **Gate explícito:** el primer deploy que reemplaza al sitio viejo se hace solo con confirmación de Joaquin en ese momento.
 5. `netlify.toml` con build command y headers de cache para assets.
@@ -79,9 +79,9 @@ Extras: página **404 bilingüe** con link de vuelta; CV PDF servido desde `/doc
 ## 7. Manejo de errores y edge cases
 
 - **404**: página estática bilingüe (detecta por ruta `/es/*` para idioma) con link al home.
-- **Formulario**: Netlify Forms con honeypot; página/estado de éxito accesible sin JS (redirect o mensaje estático); si Forms fallara, los links directos de contacto siguen visibles al lado del form.
+- **Formulario**: Netlify Forms con honeypot; al enviar, redirect a página de éxito estática (`/thanks/` en EN, `/es/gracias/` en ES); si Forms fallara, los links directos de contacto siguen visibles al lado del form.
 - **Fonts**: fallback a system-ui si el woff2 no carga.
-- **JS deshabilitado**: todo el contenido visible y navegable; el menú móvil degrada a nav siempre visible o anchor links accesibles.
+- **JS deshabilitado**: todo el contenido visible y navegable; sin JS la navegación queda siempre visible vía CSS (el botón hamburguesa solo se muestra cuando hay JS).
 
 ## 8. Criterios de aceptación
 
