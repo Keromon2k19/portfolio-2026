@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import type { Locale, SiteContent } from "../data/content";
-import { shared } from "../data/content";
+import { shared, links } from "../data/content";
 
 interface Props {
   locale: Locale;
@@ -13,6 +13,30 @@ const site = Astro.site!.href.replace(/\/$/, "");
 const canonical = site + c.meta.path;
 const alternate = site + c.meta.altPath;
 const skipLabel = locale === "en" ? "Skip to content" : "Saltar al contenido";
+const ogLocale = locale === "en" ? "en_US" : "es_ES";
+const ogLocaleAlt = locale === "en" ? "es_ES" : "en_US";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: shared.name,
+  jobTitle: "Salesforce Administrator & Developer",
+  description: c.meta.description,
+  url: site + "/",
+  image: site + c.meta.ogImage,
+  email: shared.email,
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "AR",
+    addressLocality: shared.location,
+  },
+  knowsLanguage: ["es", "en"],
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "Plataforma 5 – CloudGaia",
+  },
+  sameAs: [links.linkedin, links.github, links.trailblazer],
+};
 ---
 
 <!doctype html>
@@ -23,6 +47,7 @@ const skipLabel = locale === "en" ? "Skip to content" : "Saltar al contenido";
     <title>{c.meta.title}</title>
     <meta name="description" content={c.meta.description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#032D60" />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang={locale === "en" ? "es" : "en"} href={alternate} />
@@ -36,12 +61,22 @@ const skipLabel = locale === "en" ? "Skip to content" : "Saltar al contenido";
       crossorigin
     />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={shared.name} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
     <meta property="og:title" content={c.meta.title} />
     <meta property="og:description" content={c.meta.description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={site + c.meta.ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={c.meta.title} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={c.meta.title} />
+    <meta name="twitter:description" content={c.meta.description} />
+    <meta name="twitter:image" content={site + c.meta.ogImage} />
     <meta name="author" content={shared.name} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <a class="skip-link" href="#main">{skipLabel}</a>

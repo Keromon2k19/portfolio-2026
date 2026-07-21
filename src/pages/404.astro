@@ -28,6 +28,8 @@ const c = content.en;
 
 <script>
   const isEs = window.location.pathname.startsWith("/es/");
+  document.documentElement.lang = isEs ? "es" : "en";
+  if (isEs) document.title = "Página no encontrada — Joaquin Haro Filippon";
   document
     .querySelector(`[data-lang-block="${isEs ? "en" : "es"}"]`)
     ?.setAttribute("hidden", "");
