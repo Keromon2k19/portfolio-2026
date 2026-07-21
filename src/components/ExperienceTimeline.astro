@@ -12,7 +12,7 @@ const { c } = Astro.props;
 <section id="experience" class="scroll-mt-20">
   <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
     <SectionHeading kicker={c.experience.kicker} title={c.experience.title} />
-    <ol class="mt-10 space-y-10 border-l-2 border-line pl-6 sm:pl-8">
+    <ol class="reveal-group mt-10 space-y-10 border-l-2 border-line pl-6 sm:pl-8">
       {
         c.experience.items.map((item) => (
           <li class="relative">

@@ -44,6 +44,9 @@ const jsonLd = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      document.documentElement.classList.add("js");
+    </script>
     <title>{c.meta.title}</title>
     <meta name="description" content={c.meta.description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -89,5 +92,51 @@ const jsonLd = {
         <p>{c.footer.note}</p>
       </div>
     </footer>
+
+    <script>
+      import Lenis from "lenis";
+
+      const allowMotion = window.matchMedia(
+        "(prefers-reduced-motion: no-preference)",
+      ).matches;
+
+      if (allowMotion) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+        );
+        document
+          .querySelectorAll(".reveal, .reveal-group")
+          .forEach((el) => io.observe(el));
+
+        const lenis = new Lenis({ lerp: 0.1 });
+        const raf = (time: number) => {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        };
+        requestAnimationFrame(raf);
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", (event) => {
+            const href = anchor.getAttribute("href");
+            if (!href || href.length < 2) return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            event.preventDefault();
+            lenis.scrollTo(target as HTMLElement, {
+              offset: -72,
+              duration: 1.2,
+            });
+          });
+        });
+      }
+    </script>
   </body>
 </html>
