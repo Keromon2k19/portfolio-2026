@@ -2,6 +2,7 @@
 import SiteLayout from "../../components/SiteLayout.astro";
 import Header from "../../components/Header.astro";
 import Hero from "../../components/Hero.astro";
+import ExperienceTimeline from "../../components/ExperienceTimeline.astro";
 import { content } from "../../data/content";
 
 const c = content.es;
@@ -11,5 +12,6 @@ const c = content.es;
   <Header locale="es" c={c} />
   <main id="main">
     <Hero c={c} />
+    <ExperienceTimeline c={c} />
   </main>
 </SiteLayout>
