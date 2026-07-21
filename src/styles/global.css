@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #032d60;
+  --color-blue: #0176d3;
+  --color-blue-dark: #014486;
+  --color-ink: #181818;
+  --color-slate: #5b6b79;
+  --color-line: #e4eaf0;
+  --color-mist: #f8fafc;
+  --color-hero-muted: #b9cbe0;
+  --color-hero-eyebrow: #8bb8e8;
+}
+
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(1, 118, 211, 0.18);
+}
+
+a,
+button,
+input,
+textarea {
+  touch-action: manipulation;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 60;
+  transform: translateY(-150%);
+  border-radius: 6px;
+  background: var(--color-navy);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(1, 118, 211, 0.45);
+  outline-offset: 2px;
+}
