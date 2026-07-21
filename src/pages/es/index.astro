@@ -1,11 +1,13 @@
 ---
 import SiteLayout from "../../components/SiteLayout.astro";
+import Header from "../../components/Header.astro";
 import { content } from "../../data/content";
 
 const c = content.es;
 ---
 
 <SiteLayout locale="es" c={c}>
+  <Header locale="es" c={c} />
   <main id="main">
     <h1 class="text-navy text-4xl font-bold">{c.hero.title}</h1>
   </main>

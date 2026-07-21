@@ -1,0 +1,131 @@
+---
+import type { Locale, SiteContent } from "../data/content";
+import { links, shared } from "../data/content";
+import Icon from "./Icon.astro";
+
+interface Props {
+  locale: Locale;
+  c: SiteContent;
+}
+
+const { c } = Astro.props;
+
+const navItems = [
+  { href: "#experience", label: c.nav.experience },
+  { href: "#projects", label: c.nav.projects },
+  { href: "#skills", label: c.nav.skills },
+  { href: "#credentials", label: c.nav.credentials },
+  { href: "#contact", label: c.nav.contact },
+];
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur"
+>
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <a href={c.meta.path} class="flex items-center gap-2">
+      <span class="flex h-8 w-8 items-center justify-center rounded-md bg-navy text-sm font-bold text-white">
+        JH
+      </span>
+      <span class="text-sm font-semibold text-navy sm:text-base">{shared.name}</span>
+    </a>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-6">
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="block rounded px-2 py-3 text-sm font-medium text-slate transition-colors hover:text-navy sm:px-0 sm:py-2"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+        <li class="sm:ml-2">
+          <a
+            href={c.meta.altPath}
+            class="inline-block rounded-full border border-line px-3.5 py-2 text-sm font-semibold text-blue transition-colors hover:border-blue sm:py-1.5"
+          >
+            {c.meta.altLabel}
+          </a>
+        </li>
+        <li>
+          <a
+            href={links.cv}
+            download
+            class="inline-flex items-center gap-2 rounded-md border border-blue px-3 py-2.5 text-sm font-semibold text-blue transition-colors hover:bg-blue hover:text-white"
+          >
+            <Icon name="download" class="h-4 w-4" />
+            {c.nav.cv}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      class="menu-btn flex h-11 w-11 items-center justify-center rounded-md border border-line text-navy sm:hidden"
+      aria-controls="site-nav"
+      aria-expanded="false"
+      aria-label={c.nav.menuLabel}
+    >
+      <Icon name="menu" class="menu-open h-5 w-5" />
+      <Icon name="x" class="menu-close hidden h-5 w-5" />
+    </button>
+  </div>
+</header>
+
+<style>
+  @media (max-width: 639px) {
+    html.js .site-nav {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      border-bottom: 1px solid var(--color-line);
+      background: #fff;
+      padding: 0.75rem 1rem 1rem;
+    }
+    html.js #site-header[data-open] .site-nav {
+      display: block;
+    }
+    html.js #site-header[data-open] .menu-open {
+      display: none;
+    }
+    html.js #site-header[data-open] .menu-close {
+      display: block;
+    }
+  }
+  html:not(.js) .menu-btn {
+    display: none;
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add("js");
+  const header = document.getElementById("site-header");
+  const btn = document.getElementById("menu-toggle");
+  btn?.addEventListener("click", () => {
+    const open = header?.toggleAttribute("data-open");
+    btn.setAttribute("aria-expanded", String(Boolean(open)));
+  });
+  header?.querySelectorAll("a[href^='#']").forEach((a) =>
+    a.addEventListener("click", () => {
+      header.removeAttribute("data-open");
+      btn?.setAttribute("aria-expanded", "false");
+    })
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && header?.hasAttribute("data-open")) {
+      header.removeAttribute("data-open");
+      btn?.setAttribute("aria-expanded", "false");
+      btn?.focus();
+    }
+  });
+</script>
