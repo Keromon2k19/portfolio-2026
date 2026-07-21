@@ -32,23 +32,23 @@ const navItems = [
     </a>
 
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul class="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-6">
+      <ul class="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-6">
         {
           navItems.map((item) => (
             <li>
               <a
                 href={item.href}
-                class="block rounded px-2 py-3 text-sm font-medium text-slate transition-colors hover:text-navy sm:px-0 sm:py-2"
+                class="block rounded px-2 py-3 text-sm font-medium text-slate transition-colors hover:text-navy lg:px-0 lg:py-2"
               >
                 {item.label}
               </a>
             </li>
           ))
         }
-        <li class="sm:ml-2">
+        <li class="lg:ml-2">
           <a
             href={c.meta.altPath}
-            class="inline-block rounded-full border border-line px-3.5 py-2 text-sm font-semibold text-blue transition-colors hover:border-blue sm:py-1.5"
+            class="inline-block rounded-full border border-line px-3.5 py-2 text-sm font-semibold text-blue transition-colors hover:border-blue lg:py-1.5"
           >
             {c.meta.altLabel}
           </a>
@@ -69,7 +69,7 @@ const navItems = [
     <button
       id="menu-toggle"
       type="button"
-      class="menu-btn flex h-11 w-11 items-center justify-center rounded-md border border-line text-navy sm:hidden"
+      class="menu-btn flex h-11 w-11 items-center justify-center rounded-md border border-line text-navy lg:hidden"
       aria-controls="site-nav"
       aria-expanded="false"
       aria-label={c.nav.menuLabel}
@@ -81,7 +81,7 @@ const navItems = [
 </header>
 
 <style>
-  @media (max-width: 639px) {
+  @media (max-width: 1023px) {
     html.js .site-nav {
       display: none;
       position: absolute;
