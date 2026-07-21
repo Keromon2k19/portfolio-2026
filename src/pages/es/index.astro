@@ -3,6 +3,7 @@ import SiteLayout from "../../components/SiteLayout.astro";
 import Header from "../../components/Header.astro";
 import Hero from "../../components/Hero.astro";
 import ExperienceTimeline from "../../components/ExperienceTimeline.astro";
+import ProjectCards from "../../components/ProjectCards.astro";
 import { content } from "../../data/content";
 
 const c = content.es;
@@ -13,5 +14,6 @@ const c = content.es;
   <main id="main">
     <Hero c={c} />
     <ExperienceTimeline c={c} />
+    <ProjectCards c={c} />
   </main>
 </SiteLayout>
