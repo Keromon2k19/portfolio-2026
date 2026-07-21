@@ -1754,7 +1754,6 @@ git commit -m "feat: secciones de skills y credenciales"
 ---
 import type { SiteContent } from "../data/content";
 import { links, shared } from "../data/content";
-import SectionHeading from "./SectionHeading.astro";
 import Icon from "./Icon.astro";
 
 interface Props {
