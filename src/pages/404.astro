@@ -1,0 +1,34 @@
+---
+import SiteLayout from "../components/SiteLayout.astro";
+import { content } from "../data/content";
+
+const c = content.en;
+---
+
+<SiteLayout locale="en" c={c}>
+  <main id="main" class="mx-auto flex max-w-5xl flex-col items-start gap-6 px-4 py-24 sm:px-6">
+    <p class="text-6xl font-bold text-navy">404</p>
+    <div data-lang-block="en" class="flex flex-col items-start gap-3">
+      <h1 class="text-2xl font-bold text-navy">Page not found</h1>
+      <a href="/" class="rounded-md bg-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-dark">
+        Back to home
+      </a>
+    </div>
+    <div data-lang-block="es" class="flex flex-col items-start gap-3">
+      <h1 class="text-2xl font-bold text-navy">Página no encontrada</h1>
+      <a
+        href="/es/"
+        class="rounded-md border border-line px-5 py-3 text-sm font-semibold text-blue transition-colors hover:border-blue"
+      >
+        Volver al inicio
+      </a>
+    </div>
+  </main>
+</SiteLayout>
+
+<script>
+  const isEs = window.location.pathname.startsWith("/es/");
+  document
+    .querySelector(`[data-lang-block="${isEs ? "en" : "es"}"]`)
+    ?.setAttribute("hidden", "");
+</script>
