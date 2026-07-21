@@ -1,0 +1,115 @@
+---
+import type { SiteContent } from "../data/content";
+import { links, shared } from "../data/content";
+import SectionHeading from "./SectionHeading.astro";
+import Icon from "./Icon.astro";
+
+interface Props {
+  c: SiteContent;
+}
+
+const { c } = Astro.props;
+
+const direct = [
+  { href: links.email, label: shared.email, icon: "mail" as const },
+  { href: links.linkedin, label: "LinkedIn", icon: "linkedin" as const },
+  { href: links.github, label: "GitHub", icon: "github" as const },
+  { href: links.trailblazer, label: "Trailblazer", icon: "cloud" as const },
+  { href: links.whatsapp, label: "WhatsApp", icon: "whatsapp" as const },
+];
+---
+
+<section id="contact" class="scroll-mt-20 bg-navy text-white">
+  <div class="mx-auto grid max-w-5xl gap-12 px-4 py-16 sm:px-6 sm:py-20 md:grid-cols-2">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.14em] text-hero-eyebrow">
+        {c.contact.kicker}
+      </p>
+      <h2 class="mt-2 text-3xl font-bold text-white">{c.contact.title}</h2>
+      <p class="mt-4 max-w-md leading-relaxed text-hero-muted">{c.contact.body}</p>
+
+      <h3 class="mt-8 text-sm font-bold uppercase tracking-wide text-hero-eyebrow">
+        {c.contact.directTitle}
+      </h3>
+      <ul class="mt-4 space-y-3">
+        {
+          direct.map((d) => (
+            <li>
+              <a
+                href={d.href}
+                target={d.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                class="inline-flex min-h-11 items-center gap-3 text-sm font-medium text-white transition-colors hover:text-hero-eyebrow"
+              >
+                <span class="flex h-10 w-10 items-center justify-center rounded-md border border-white/25">
+                  <Icon name={d.icon} class="h-4 w-4" />
+                </span>
+                {d.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <form
+      name="contact"
+      method="POST"
+      action={c.contact.form.action}
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="rounded-lg bg-white p-6 text-ink"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden">
+        <label>Bot field<input name="bot-field" /></label>
+      </p>
+      <div class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-navy">
+            {c.contact.form.name} <span class="text-blue" aria-hidden="true">*</span>
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            class="mt-1.5 w-full rounded-md border border-line px-3 py-3 text-base transition-colors focus:border-blue"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold text-navy">
+            {c.contact.form.email} <span class="text-blue" aria-hidden="true">*</span>
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            class="mt-1.5 w-full rounded-md border border-line px-3 py-3 text-base transition-colors focus:border-blue"
+          />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold text-navy">
+            {c.contact.form.message} <span class="text-blue" aria-hidden="true">*</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="mt-1.5 w-full rounded-md border border-line px-3 py-3 text-base transition-colors focus:border-blue"></textarea>
+        </div>
+        <button
+          type="submit"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-dark"
+        >
+          {c.contact.form.submit}
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
