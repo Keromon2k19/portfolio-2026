@@ -233,3 +233,23 @@ html.modal-open {
     opacity: 0;
   }
 }
+
+/* Card surfaces */
+.surface-card {
+  box-shadow:
+    0 1px 2px rgba(3, 45, 96, 0.04),
+    0 8px 20px rgba(3, 45, 96, 0.05);
+}
+
+.surface-card-interactive {
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.surface-card-interactive:hover {
+  border-color: rgba(1, 118, 211, 0.35);
+  box-shadow:
+    0 2px 4px rgba(3, 45, 96, 0.06),
+    0 16px 34px rgba(3, 45, 96, 0.12);
+}

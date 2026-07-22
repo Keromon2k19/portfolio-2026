@@ -19,7 +19,7 @@ const items = c.projects.items;
     <div class="reveal-group mt-10 grid gap-6 md:grid-cols-2">
       {
         items.map((p, i) => (
-          <article class="flex flex-col rounded-lg border border-line bg-white p-6">
+          <article class="surface-card surface-card-interactive flex flex-col rounded-lg border border-line bg-white p-6">
             <p class="text-xs font-semibold uppercase tracking-wide text-blue">{p.type}</p>
             <h3 class="mt-2 text-lg font-bold text-navy">{p.name}</h3>
             <dl class="mt-4 space-y-3 text-base leading-relaxed">
