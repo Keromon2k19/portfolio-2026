@@ -12,3 +12,6 @@ _archive/
 .claude/
 .playwright-mcp/
 qa*.png
+
+# Local Netlify folder
+.netlify
