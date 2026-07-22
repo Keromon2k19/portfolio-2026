@@ -144,7 +144,7 @@ export const content: Record<Locale, SiteContent> = {
     hero: {
       eyebrow: "Salesforce portfolio",
       title: "Salesforce Administrator & Developer",
-      lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation — in English and Spanish.",
+      lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation.",
       availability: "Remote from Argentina · Spanish native · English B2",
       ctaProjects: "View projects",
       ctaCv: "Download CV",
@@ -444,7 +444,7 @@ export const content: Record<Locale, SiteContent> = {
     hero: {
       eyebrow: "Portfolio Salesforce",
       title: "Salesforce Administrator & Developer",
-      lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación — en inglés y español.",
+      lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación.",
       availability: "Remoto desde Argentina · Español nativo · Inglés B2",
       ctaProjects: "Ver proyectos",
       ctaCv: "Descargar CV",
