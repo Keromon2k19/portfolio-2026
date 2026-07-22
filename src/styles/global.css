@@ -190,15 +190,18 @@ html.modal-open {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
   color: var(--color-slate);
   transition:
     background 0.15s ease,
-    color 0.15s ease;
+    color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .dialog-close:hover {
   background: var(--color-mist);
+  border-color: var(--color-slate);
   color: var(--color-navy);
 }
 

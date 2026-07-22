@@ -85,7 +85,6 @@ export interface SiteContent {
     detailLabel: string;
     closeLabel: string;
     detailSections: {
-      overview: string;
       highlights: string;
       stack: string;
       context: string;
@@ -201,7 +200,6 @@ export const content: Record<Locale, SiteContent> = {
       detailLabel: "View details",
       closeLabel: "Close",
       detailSections: {
-        overview: "Overview",
         highlights: "What I built",
         stack: "Stack",
         context: "Context",
@@ -501,7 +499,6 @@ export const content: Record<Locale, SiteContent> = {
       detailLabel: "Ver detalle",
       closeLabel: "Cerrar",
       detailSections: {
-        overview: "Resumen",
         highlights: "Qué construí",
         stack: "Stack",
         context: "Contexto",
