@@ -1,0 +1,9 @@
+# Binary assets — never apply text/EOL (LF↔CRLF) conversion.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ico binary
