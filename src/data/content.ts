@@ -31,6 +31,7 @@ export interface ProjectItem {
   solution: string;
   result: string;
   details: ProjectDetails;
+  liveUrl?: string;
 }
 
 export interface SkillGroup {
@@ -84,6 +85,7 @@ export interface SiteContent {
     note: string;
     detailLabel: string;
     closeLabel: string;
+    liveLabel: string;
     detailSections: {
       highlights: string;
       stack: string;
@@ -125,7 +127,7 @@ export const content: Record<Locale, SiteContent> = {
     meta: {
       title: "Joaquin Haro Filippon — Salesforce Administrator & Developer",
       description:
-        "Salesforce Administrator & Developer from Argentina. CRM data quality, Flows, reporting, documentation, and Spanish localization for real orgs.",
+        "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. CRM data, Flows, reporting, documentation, and web design.",
       path: "/",
       altPath: "/es/",
       altLabel: "Español",
@@ -148,14 +150,14 @@ export const content: Record<Locale, SiteContent> = {
       ctaProjects: "View projects",
       ctaCv: "Download CV",
       stats: [
+        { value: "10 years", label: "in customer & technical support" },
         { value: "1+ year", label: "hands-on Salesforce experience" },
-        { value: "800+ hrs", label: "intensive Salesforce training" },
         { value: "3", label: "Salesforce & Marketing Cloud credentials" },
       ],
     },
     experience: {
       kicker: "Experience",
-      title: "Recent Salesforce work",
+      title: "Salesforce work, built on a decade of support",
       items: [
         {
           role: "Salesforce Administrator",
@@ -182,23 +184,34 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
-          role: "Computer Technician",
+          role: "Independent Technical & Customer Support",
+          company: "Self-employed",
+          dates: "2016 – Present",
+          place: "Esquel, Argentina",
+          bullets: [
+            "Provide end-to-end technical and customer support to individuals and small businesses — diagnosing hardware and software issues and coordinating service follow-up.",
+            "Communicate solutions in plain language and document every issue and next step, sustaining a referral-based client base for nearly a decade.",
+          ],
+        },
+        {
+          role: "Computer Technician & Customer Support",
           company: "Infinitech",
           dates: "Jun 2017 – Aug 2021",
           place: "Esquel, Chubut",
           bullets: [
-            "Diagnosed and resolved hardware and software issues for a high-volume client base, from intake to resolution.",
-            "Served as primary technical contact, translating technical problems into plain-language next steps.",
+            "Delivered front-line customer service and technical support in a repair shop, handling intake and resolving issues for notebooks, PCs, and gaming consoles.",
+            "Coordinated diagnosis, repair follow-up, customer updates, and delivery, improving satisfaction and repeat business.",
           ],
         },
       ],
     },
     projects: {
       kicker: "Projects",
-      title: "Salesforce case studies",
+      title: "Selected projects",
       note: "Private production work is summarized without exposing client data.",
       detailLabel: "View details",
       closeLabel: "Close",
+      liveLabel: "Visit live site",
       detailSections: {
         highlights: "What I built",
         stack: "Stack",
@@ -322,6 +335,36 @@ export const content: Record<Locale, SiteContent> = {
               "Salesforce configuration project during the bootcamp (Plataforma 5 – CloudGaia, 2023). Focus on data modeling and role-based security.",
           },
         },
+        {
+          name: "Recuerdos de Cobre",
+          type: "Web design · Personal project",
+          problem:
+            "A long-running tabletop RPG campaign kept generating lore, characters, and session history — a growing pile of information with nowhere organized to live.",
+          solution:
+            "Designed and built a web archive that structures it all: chronicles, an atlas of characters, factions and places, and a knowledge base — with clear navigation and a consistent taxonomy.",
+          result:
+            "Players and the game master browse the whole world from one place, and the content stays organized as it keeps growing.",
+          details: {
+            overview:
+              "A web archive for the 'Recuerdos de Cobre' tabletop RPG campaign — worldbuilding, session chronicles, and lore, organized so a large, growing story stays navigable.",
+            highlights: [
+              "Structured a large body of narrative into a clear information architecture (Chronicles, Atlas, Knowledge).",
+              "Designed a cohesive dark theme with custom branding and artwork.",
+              "Built reusable content patterns for characters, factions, and locations to stay consistent at scale.",
+              "Prioritized navigation and readability across deeply interconnected content.",
+            ],
+            stack: [
+              "Web design",
+              "Information architecture",
+              "Responsive UI",
+              "Content structure",
+              "Vercel",
+            ],
+            context:
+              "Personal project — an ongoing worldbuilding and web-design exercise. Live and actively expanding.",
+          },
+          liveUrl: "https://recuerdos-de-cobre.vercel.app/",
+        },
       ],
     },
     skills: {
@@ -361,16 +404,39 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
-          name: "Tools, Web & Marketing Cloud",
+          name: "Customer & Technical Support",
           items: [
+            "Customer retention & service",
+            "Ticket & case management",
+            "Technical troubleshooting",
+            "Service coordination & follow-up",
+            "Plain-language communication",
+            "Conflict resolution",
+          ],
+        },
+        {
+          name: "Tools & AI",
+          items: [
+            "Claude",
+            "ChatGPT",
+            "Gemini",
+            "NotebookLM",
+            "Notion",
+            "Obsidian",
+            "Slack",
+            "Trello",
+          ],
+        },
+        {
+          name: "Web & Marketing Cloud",
+          items: [
+            "HTML, CSS & JavaScript",
+            "Web design",
+            "Information architecture",
             "GitHub",
             "VS Code",
-            "Agile / Scrum",
-            "Trello",
-            "HTML, CSS & JavaScript",
             "Email Studio",
             "Journey Builder",
-            "Modern AI tools",
           ],
         },
       ],
@@ -406,7 +472,7 @@ export const content: Record<Locale, SiteContent> = {
     contact: {
       kicker: "Contact",
       title: "Let's talk Salesforce",
-      body: "Best fit: Salesforce Admin/Developer roles involving CRM cleanup, reporting, Flows, documentation, and localization.",
+      body: "Best fit: Salesforce Admin/Developer roles. Also open to customer & technical support and web work.",
       directTitle: "Direct links",
       form: {
         name: "Name",
@@ -424,7 +490,7 @@ export const content: Record<Locale, SiteContent> = {
     meta: {
       title: "Joaquin Haro Filippon — Salesforce Administrator & Developer",
       description:
-        "Salesforce Administrator & Developer desde Argentina. Calidad de datos CRM, Flows, reporting, documentación y localización al español para orgs reales.",
+        "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Datos CRM, Flows, reporting, documentación y diseño web.",
       path: "/es/",
       altPath: "/",
       altLabel: "English",
@@ -447,14 +513,14 @@ export const content: Record<Locale, SiteContent> = {
       ctaProjects: "Ver proyectos",
       ctaCv: "Descargar CV",
       stats: [
+        { value: "10 años", label: "en atención al cliente y soporte técnico" },
         { value: "1+ año", label: "de experiencia práctica en Salesforce" },
-        { value: "800+ hs", label: "de formación intensiva Salesforce" },
         { value: "3", label: "credenciales Salesforce y Marketing Cloud" },
       ],
     },
     experience: {
       kicker: "Experiencia",
-      title: "Trabajo Salesforce reciente",
+      title: "Trabajo Salesforce, sobre una década de soporte",
       items: [
         {
           role: "Salesforce Administrator",
@@ -481,23 +547,34 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
-          role: "Técnico informático",
+          role: "Soporte técnico y al cliente independiente",
+          company: "Autónomo",
+          dates: "2016 – Presente",
+          place: "Esquel, Argentina",
+          bullets: [
+            "Brindo soporte técnico y atención al cliente end-to-end a personas y pequeños negocios — diagnóstico de hardware y software y coordinación del seguimiento del servicio.",
+            "Comunico soluciones en lenguaje claro y documento cada problema y próximo paso, sosteniendo una base de clientes por recomendación durante casi una década.",
+          ],
+        },
+        {
+          role: "Técnico y atención al cliente",
           company: "Infinitech",
           dates: "Jun 2017 – Ago 2021",
           place: "Esquel, Chubut",
           bullets: [
-            "Diagnostiqué y resolví problemas de hardware y software para una base alta de clientes, de la recepción a la entrega.",
-            "Fui el contacto técnico principal, traduciendo problemas técnicos a próximos pasos en lenguaje claro.",
+            "Di atención al cliente y soporte técnico de primera línea en un local de reparación, gestionando la recepción y resolviendo casos de notebooks, PCs y consolas.",
+            "Coordiné diagnóstico, seguimiento de reparación, avisos al cliente y entrega, mejorando la satisfacción y la recompra.",
           ],
         },
       ],
     },
     projects: {
       kicker: "Proyectos",
-      title: "Casos de estudio Salesforce",
+      title: "Proyectos seleccionados",
       note: "El trabajo privado en producción se resume sin exponer datos de clientes.",
       detailLabel: "Ver detalle",
       closeLabel: "Cerrar",
+      liveLabel: "Visitar sitio",
       detailSections: {
         highlights: "Qué construí",
         stack: "Stack",
@@ -621,6 +698,36 @@ export const content: Record<Locale, SiteContent> = {
               "Proyecto de configuración Salesforce durante el bootcamp (Plataforma 5 – CloudGaia, 2023). Foco en modelado de datos y seguridad por rol.",
           },
         },
+        {
+          name: "Recuerdos de Cobre",
+          type: "Diseño web · Proyecto personal",
+          problem:
+            "Una campaña de rol de mesa de larga duración generaba lore, personajes e historia de sesiones — una pila creciente de información sin un lugar ordenado donde vivir.",
+          solution:
+            "Diseñé y construí un archivo web que estructura todo: crónicas, un atlas de personajes, facciones y lugares, y una base de conocimiento — con navegación clara y una taxonomía consistente.",
+          result:
+            "Jugadores y máster recorren todo el mundo desde un solo lugar, y el contenido se mantiene ordenado a medida que crece.",
+          details: {
+            overview:
+              "Un archivo web para la campaña de rol 'Recuerdos de Cobre' — worldbuilding, crónicas de sesión y lore, organizados para que una historia grande y en crecimiento siga siendo navegable.",
+            highlights: [
+              "Estructuré un gran volumen de narrativa en una arquitectura de información clara (Crónicas, Atlas, Conocimiento).",
+              "Diseñé un tema oscuro cohesivo con identidad y arte propios.",
+              "Construí patrones de contenido reutilizables para personajes, facciones y lugares, consistentes a escala.",
+              "Prioricé la navegación y la legibilidad en contenido profundamente interconectado.",
+            ],
+            stack: [
+              "Diseño web",
+              "Arquitectura de información",
+              "UI responsive",
+              "Estructura de contenido",
+              "Vercel",
+            ],
+            context:
+              "Proyecto personal — un ejercicio continuo de worldbuilding y diseño web. En vivo y en expansión activa.",
+          },
+          liveUrl: "https://recuerdos-de-cobre.vercel.app/",
+        },
       ],
     },
     skills: {
@@ -660,16 +767,39 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
-          name: "Herramientas, Web & Marketing Cloud",
+          name: "Atención al cliente y soporte técnico",
           items: [
+            "Retención y atención al cliente",
+            "Gestión de tickets y casos",
+            "Diagnóstico técnico (troubleshooting)",
+            "Coordinación y seguimiento de servicio",
+            "Comunicación en lenguaje claro",
+            "Resolución de conflictos",
+          ],
+        },
+        {
+          name: "Herramientas & IA",
+          items: [
+            "Claude",
+            "ChatGPT",
+            "Gemini",
+            "NotebookLM",
+            "Notion",
+            "Obsidian",
+            "Slack",
+            "Trello",
+          ],
+        },
+        {
+          name: "Web & Marketing Cloud",
+          items: [
+            "HTML, CSS y JavaScript",
+            "Diseño web",
+            "Arquitectura de información",
             "GitHub",
             "VS Code",
-            "Agile / Scrum",
-            "Trello",
-            "HTML, CSS y JavaScript",
             "Email Studio",
             "Journey Builder",
-            "Herramientas modernas de IA",
           ],
         },
       ],
@@ -705,7 +835,7 @@ export const content: Record<Locale, SiteContent> = {
     contact: {
       kicker: "Contacto",
       title: "Hablemos de Salesforce",
-      body: "Mejor fit: roles Salesforce Admin/Developer con limpieza de CRM, reporting, Flows, documentación y localización.",
+      body: "Mejor fit: roles Salesforce Admin/Developer. También abierto a atención al cliente, soporte técnico y trabajo web.",
       directTitle: "Links directos",
       form: {
         name: "Nombre",

@@ -121,6 +121,20 @@ const items = c.projects.items;
                 </h4>
                 <p class="mt-1.5 text-sm leading-relaxed text-slate">{p.details.context}</p>
               </div>
+
+              {
+                p.liveUrl && (
+                  <a
+                    href={p.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-7 inline-flex items-center gap-2 rounded-md bg-blue px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-dark"
+                  >
+                    {c.projects.liveLabel}
+                    <Icon name="external" class="h-4 w-4" />
+                  </a>
+                )
+              }
             </div>
           </div>
         </dialog>
