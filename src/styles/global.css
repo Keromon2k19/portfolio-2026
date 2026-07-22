@@ -180,6 +180,8 @@ html.modal-open {
   color: var(--color-ink);
   box-shadow: 0 24px 70px rgba(3, 45, 96, 0.35);
   overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .project-dialog::backdrop {
