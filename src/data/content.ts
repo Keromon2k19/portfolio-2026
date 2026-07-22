@@ -191,6 +191,7 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Provide end-to-end technical and customer support to individuals and small businesses — diagnosing hardware and software issues and coordinating service follow-up.",
             "Communicate solutions in plain language and document every issue and next step, sustaining a referral-based client base for nearly a decade.",
+            "Scope and quote each job to the client's budget and needs — from one-off fixes to ongoing support.",
           ],
         },
         {
@@ -554,6 +555,7 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Brindo soporte técnico y atención al cliente end-to-end a personas y pequeños negocios — diagnóstico de hardware y software y coordinación del seguimiento del servicio.",
             "Comunico soluciones en lenguaje claro y documento cada problema y próximo paso, sosteniendo una base de clientes por recomendación durante casi una década.",
+            "Cotizo y dimensiono cada trabajo según el presupuesto y las necesidades de cada cliente — desde arreglos puntuales hasta soporte continuo.",
           ],
         },
         {
