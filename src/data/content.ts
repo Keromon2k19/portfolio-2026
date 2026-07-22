@@ -7,8 +7,6 @@ export const links = {
   trailblazer: "https://www.salesforce.com/trailblazer/jharofilippon",
   whatsapp: "https://wa.me/542945699379",
   cv: "/docs/joaquin-haro-filippon-salesforce-cv-2026.pdf",
-  repoCloudConsulting: "https://github.com/Keromon2k19/CloudConsulting",
-  repoELearning: "https://github.com/Keromon2k19/E-learning-Platform",
 } as const;
 
 export interface ExperienceItem {
@@ -19,14 +17,20 @@ export interface ExperienceItem {
   bullets: readonly string[];
 }
 
+export interface ProjectDetails {
+  overview: string;
+  highlights: readonly string[];
+  stack: readonly string[];
+  context: string;
+}
+
 export interface ProjectItem {
   name: string;
   type: string;
   problem: string;
   solution: string;
   result: string;
-  private?: string;
-  repo?: string;
+  details: ProjectDetails;
 }
 
 export interface SkillGroup {
@@ -78,7 +82,14 @@ export interface SiteContent {
     kicker: string;
     title: string;
     note: string;
-    repoLabel: string;
+    detailLabel: string;
+    closeLabel: string;
+    detailSections: {
+      overview: string;
+      highlights: string;
+      stack: string;
+      context: string;
+    };
     labels: { problem: string; solution: string; result: string };
     items: readonly ProjectItem[];
   };
@@ -187,7 +198,14 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "Projects",
       title: "Salesforce case studies",
       note: "Private production work is summarized without exposing client data.",
-      repoLabel: "View repo on GitHub",
+      detailLabel: "View details",
+      closeLabel: "Close",
+      detailSections: {
+        overview: "Overview",
+        highlights: "What I built",
+        stack: "Stack",
+        context: "Context",
+      },
       labels: { problem: "Problem", solution: "Solution", result: "Result" },
       items: [
         {
@@ -199,7 +217,27 @@ export const content: Record<Locale, SiteContent> = {
             "Configured custom objects and fields, improved Account layouts, corrected records, localized metadata, and wrote end-to-end documentation.",
           result:
             "Non-technical users got a clear operating reference, and reporting became easier to trust.",
-          private: "Private production work — no public repo.",
+          details: {
+            overview:
+              "A production Salesforce org for InCompany's sales and ops teams, focused on cleaner data, a documented quoting system, and a Spanish interface.",
+            highlights: [
+              "Designed and deployed custom objects and fields to model quoting and operational workflows.",
+              "Restructured Account page layouts to surface critical data earlier in daily use.",
+              "Audited and corrected records across objects to restore reporting integrity.",
+              "Localized custom labels, field names, and UI components into Spanish.",
+              "Wrote end-to-end documentation used daily by non-technical teams.",
+            ],
+            stack: [
+              "Custom objects & fields",
+              "Page layouts",
+              "Flows",
+              "Data quality",
+              "Spanish localization",
+              "Documentation",
+            ],
+            context:
+              "Internship, remote (Nov 2025 – May 2026). Private production work, summarized without client data — no public repo.",
+          },
         },
         {
           name: "Reporting & Automation Layer",
@@ -210,7 +248,23 @@ export const content: Record<Locale, SiteContent> = {
             "Designed object relationships, reports, dashboards, and Flow automation, iterating inside an Agile cadence.",
           result:
             "The org gained a useful reporting layer and a configurable automation foundation.",
-          private: "Client work summarized without sensitive details.",
+          details: {
+            overview:
+              "A reporting and automation layer for a client Salesforce org, giving stakeholders visibility into operational metrics as requirements evolved.",
+            highlights: [
+              "Built and maintained custom data architecture for end-to-end process tracking.",
+              "Designed a reporting and dashboards layer, rebuilt iteratively across sprints.",
+              "Implemented and tested Flow automations within a two-week Agile cadence.",
+            ],
+            stack: [
+              "Custom data architecture",
+              "Reports & dashboards",
+              "Flows",
+              "Agile / Scrum",
+            ],
+            context:
+              "Remote (Nov 2024 – Apr 2025). Client work summarized without sensitive details — no public repo.",
+          },
         },
         {
           name: "CloudConsulting Project Management App",
@@ -218,10 +272,28 @@ export const content: Record<Locale, SiteContent> = {
           problem:
             "A real client had project and resource data scattered across multiple sources.",
           solution:
-            "Built a Salesforce project management app with custom objects, Flows, reports, dashboards, and Apex, in a 3-person Scrum team.",
+            "Built a Salesforce project management app with custom objects, Flows, reports, dashboards, and Apex, in a Scrum team.",
           result:
             "Shipped a unified org for project visibility within a 6-week delivery window.",
-          repo: links.repoCloudConsulting,
+          details: {
+            overview:
+              "A Salesforce app that consolidates scattered project and resource data into a single org, giving a client team end-to-end visibility over their projects.",
+            highlights: [
+              "Modeled projects, resources, and their relationships with custom objects and fields.",
+              "Automated tracking with Flows to reduce manual data entry.",
+              "Built reports and dashboards for project status and resource allocation.",
+              "Added Apex for logic beyond declarative automation.",
+            ],
+            stack: [
+              "Custom objects & fields",
+              "Flows",
+              "Reports & dashboards",
+              "Apex",
+              "SFDX",
+            ],
+            context:
+              "Salesforce Developer bootcamp (Plataforma 5 – CloudGaia, 2023). Real client delivery in a collaborative Scrum team, ~6-week window.",
+          },
         },
         {
           name: "E-Learning Platform",
@@ -232,7 +304,25 @@ export const content: Record<Locale, SiteContent> = {
             "Modeled course data with custom objects and enforced role-based access with profiles, permission sets, and validation rules.",
           result:
             "A role-aware org with progress dashboards and strong data integrity rules.",
-          repo: links.repoELearning,
+          details: {
+            overview:
+              "A Salesforce org that models an e-learning experience for students and teachers — courses, enrollments, and progress — with role-based access enforced from the ground up.",
+            highlights: [
+              "Modeled courses, enrollments, and progress data from scratch with custom objects.",
+              "Enforced separate student and teacher access with profiles and permission sets, with no overlap.",
+              "Added validation rules to keep records consistent across the org.",
+              "Built progress-tracking dashboards.",
+            ],
+            stack: [
+              "Custom objects",
+              "Profiles & permission sets",
+              "Validation rules",
+              "Dashboards",
+              "SFDX",
+            ],
+            context:
+              "Salesforce configuration project during the bootcamp (Plataforma 5 – CloudGaia, 2023). Focus on data modeling and role-based security.",
+          },
         },
       ],
     },
@@ -408,7 +498,14 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "Proyectos",
       title: "Casos de estudio Salesforce",
       note: "El trabajo privado en producción se resume sin exponer datos de clientes.",
-      repoLabel: "Ver repo en GitHub",
+      detailLabel: "Ver detalle",
+      closeLabel: "Cerrar",
+      detailSections: {
+        overview: "Resumen",
+        highlights: "Qué construí",
+        stack: "Stack",
+        context: "Contexto",
+      },
       labels: { problem: "Problema", solution: "Solución", result: "Resultado" },
       items: [
         {
@@ -420,7 +517,27 @@ export const content: Record<Locale, SiteContent> = {
             "Configuré objetos y campos custom, mejoré layouts de Account, corregí registros, localicé metadata y escribí documentación end-to-end.",
           result:
             "Los usuarios no técnicos ganaron una referencia clara de operación y el reporting se volvió confiable.",
-          private: "Trabajo privado en producción — sin repo público.",
+          details: {
+            overview:
+              "Una org Salesforce en producción para los equipos de ventas y operaciones de InCompany, enfocada en datos más limpios, un sistema de cotizaciones documentado y una interfaz en español.",
+            highlights: [
+              "Diseñé y desplegué objetos y campos custom para modelar los flujos de cotización y operaciones.",
+              "Reestructuré page layouts de Account para priorizar los datos críticos en el uso diario.",
+              "Audité y corregí registros en múltiples objetos para restaurar la integridad del reporting.",
+              "Localicé custom labels, nombres de campos y componentes de UI al español.",
+              "Escribí documentación end-to-end usada a diario por equipos no técnicos.",
+            ],
+            stack: [
+              "Objetos y campos custom",
+              "Page layouts",
+              "Flows",
+              "Calidad de datos",
+              "Localización al español",
+              "Documentación",
+            ],
+            context:
+              "Pasantía, remoto (Nov 2025 – May 2026). Trabajo privado en producción, resumido sin datos del cliente — sin repo público.",
+          },
         },
         {
           name: "Reporting & Automation Layer",
@@ -431,7 +548,23 @@ export const content: Record<Locale, SiteContent> = {
             "Diseñé relaciones de objetos, reportes, dashboards y automatización con Flows, iterando en cadencia Agile.",
           result:
             "La org ganó una capa de reporting útil y una base de automatización configurable.",
-          private: "Trabajo de cliente resumido sin detalles sensibles.",
+          details: {
+            overview:
+              "Una capa de reporting y automatización para una org Salesforce de cliente, dándoles a los stakeholders visibilidad de las métricas operativas mientras los requerimientos evolucionaban.",
+            highlights: [
+              "Construí y mantuve arquitectura de datos custom para el seguimiento de procesos end-to-end.",
+              "Diseñé una capa de reportes y dashboards, reconstruida iterativamente entre sprints.",
+              "Implementé y probé automatizaciones con Flows en una cadencia Agile de dos semanas.",
+            ],
+            stack: [
+              "Arquitectura de datos custom",
+              "Reportes y dashboards",
+              "Flows",
+              "Agile / Scrum",
+            ],
+            context:
+              "Remoto (Nov 2024 – Abr 2025). Trabajo de cliente resumido sin detalles sensibles — sin repo público.",
+          },
         },
         {
           name: "CloudConsulting Project Management App",
@@ -439,10 +572,28 @@ export const content: Record<Locale, SiteContent> = {
           problem:
             "Un cliente real tenía datos de proyectos y recursos dispersos en múltiples fuentes.",
           solution:
-            "Construimos una app de project management en Salesforce con objetos custom, Flows, reportes, dashboards y Apex, en un equipo Scrum de 3.",
+            "Construimos una app de project management en Salesforce con objetos custom, Flows, reportes, dashboards y Apex, en un equipo Scrum.",
           result:
             "Entregamos una org unificada para visibilidad de proyectos en una ventana de 6 semanas.",
-          repo: links.repoCloudConsulting,
+          details: {
+            overview:
+              "Una app Salesforce que consolida datos de proyectos y recursos dispersos en una sola org, dándole al equipo del cliente visibilidad end-to-end de sus proyectos.",
+            highlights: [
+              "Modelé proyectos, recursos y sus relaciones con objetos y campos custom.",
+              "Automaticé el seguimiento con Flows para reducir la carga manual de datos.",
+              "Construí reportes y dashboards de estado de proyectos y asignación de recursos.",
+              "Sumé Apex para lógica más allá de la automatización declarativa.",
+            ],
+            stack: [
+              "Objetos y campos custom",
+              "Flows",
+              "Reportes y dashboards",
+              "Apex",
+              "SFDX",
+            ],
+            context:
+              "Bootcamp Salesforce Developer (Plataforma 5 – CloudGaia, 2023). Entrega a cliente real en un equipo Scrum colaborativo, ventana de ~6 semanas.",
+          },
         },
         {
           name: "E-Learning Platform",
@@ -453,7 +604,25 @@ export const content: Record<Locale, SiteContent> = {
             "Modelé los datos de cursos con objetos custom y apliqué acceso por rol con profiles, permission sets y validation rules.",
           result:
             "Una org con roles bien separados, dashboards de progreso y reglas fuertes de integridad de datos.",
-          repo: links.repoELearning,
+          details: {
+            overview:
+              "Una org Salesforce que modela una experiencia de e-learning para estudiantes y docentes — cursos, inscripciones y progreso — con acceso por rol aplicado desde la base.",
+            highlights: [
+              "Modelé cursos, inscripciones y datos de progreso desde cero con objetos custom.",
+              "Apliqué acceso separado para estudiantes y docentes con profiles y permission sets, sin superposición.",
+              "Sumé validation rules para mantener los registros consistentes en toda la org.",
+              "Construí dashboards de seguimiento de progreso.",
+            ],
+            stack: [
+              "Objetos custom",
+              "Profiles y permission sets",
+              "Validation rules",
+              "Dashboards",
+              "SFDX",
+            ],
+            context:
+              "Proyecto de configuración Salesforce durante el bootcamp (Plataforma 5 – CloudGaia, 2023). Foco en modelado de datos y seguridad por rol.",
+          },
         },
       ],
     },

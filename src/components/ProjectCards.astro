@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { c } = Astro.props;
+const items = c.projects.items;
 ---
 
 <section id="projects" class="scroll-mt-20 bg-mist">
@@ -17,7 +18,7 @@ const { c } = Astro.props;
 
     <div class="reveal-group mt-10 grid gap-6 md:grid-cols-2">
       {
-        c.projects.items.map((p) => (
+        items.map((p, i) => (
           <article class="flex flex-col rounded-lg border border-line bg-white p-6">
             <p class="text-xs font-semibold uppercase tracking-wide text-blue">{p.type}</p>
             <h3 class="mt-2 text-lg font-bold text-navy">{p.name}</h3>
@@ -42,27 +43,85 @@ const { c } = Astro.props;
               </div>
             </dl>
             <div class="mt-auto pt-5">
-              {p.repo ? (
-                <a
-                  href={p.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 text-sm font-semibold text-blue transition-colors hover:text-blue-dark"
-                >
-                  <Icon name="github" class="h-4 w-4" />
-                  {c.projects.repoLabel}
-                  <Icon name="external" class="h-3.5 w-3.5" />
-                </a>
-              ) : (
-                <p class="inline-flex items-center gap-2 text-sm text-slate">
-                  <Icon name="cloud" class="h-4 w-4" />
-                  {p.private}
-                </p>
-              )}
+              <button
+                type="button"
+                class="inline-flex items-center gap-2 rounded-md text-sm font-semibold text-blue transition-colors hover:text-blue-dark"
+                data-dialog-open={`project-dialog-${i}`}
+                aria-haspopup="dialog"
+              >
+                {c.projects.detailLabel}
+                <Icon name="arrow-right" class="h-4 w-4" />
+              </button>
             </div>
           </article>
         ))
       }
     </div>
+
+    {
+      items.map((p, i) => (
+        <dialog
+          id={`project-dialog-${i}`}
+          class="project-dialog"
+          aria-labelledby={`project-dialog-${i}-title`}
+        >
+          <div class="dialog-inner">
+            <div class="dialog-header">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-blue">{p.type}</p>
+                <h3
+                  id={`project-dialog-${i}-title`}
+                  class="mt-1 text-xl font-bold text-navy"
+                >
+                  {p.name}
+                </h3>
+              </div>
+              <button
+                type="button"
+                class="dialog-close"
+                data-dialog-close
+                aria-label={c.projects.closeLabel}
+              >
+                <Icon name="x" class="h-5 w-5" />
+              </button>
+            </div>
+            <div class="dialog-body">
+              <h4 class="text-xs font-bold uppercase tracking-wide text-slate">
+                {c.projects.detailSections.overview}
+              </h4>
+              <p class="mt-2 text-base leading-relaxed text-ink">{p.details.overview}</p>
+
+              <h4 class="mt-6 text-xs font-bold uppercase tracking-wide text-slate">
+                {c.projects.detailSections.highlights}
+              </h4>
+              <ul class="mt-2 space-y-1.5 text-base leading-relaxed text-ink">
+                {p.details.highlights.map((h) => (
+                  <li class="flex items-start gap-2">
+                    <span class="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-blue" />
+                    {h}
+                  </li>
+                ))}
+              </ul>
+
+              <h4 class="mt-6 text-xs font-bold uppercase tracking-wide text-slate">
+                {c.projects.detailSections.stack}
+              </h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                {p.details.stack.map((s) => (
+                  <li class="rounded-full border border-line bg-mist px-3 py-1 text-xs font-medium text-navy">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h4 class="mt-6 text-xs font-bold uppercase tracking-wide text-slate">
+                {c.projects.detailSections.context}
+              </h4>
+              <p class="mt-2 text-sm leading-relaxed text-slate">{p.details.context}</p>
+            </div>
+          </div>
+        </dialog>
+      ))
+    }
   </div>
 </section>
