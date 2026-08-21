@@ -221,6 +221,42 @@ export const content: Record<Locale, SiteContent> = {
       labels: { problem: "Problem", solution: "Solution", result: "Result" },
       items: [
         {
+          name: "Marketing Cloud Next Implementation Guide",
+          type: "Technical documentation · Esphera Consulting",
+          problem:
+            "Marketing Cloud Next runs on Data 360 and moves faster than its documentation. Teams had official reference pages, in English and scattered across releases, but no ordered path from an empty org to a first controlled send.",
+          solution:
+            "Wrote a 579-page operating procedure in Spanish: 13 sequential chapters and 3 annexes, every step classified by who requires it, every chapter closed by an explicit exit criterion, and 218 annotated screenshots.",
+          result:
+            "An implementation team can take an org from approved design to a monitored first send, leaving an auditable record of every control along the way.",
+          details: {
+            overview:
+              "A Spanish-language operating procedure for implementing Marketing Cloud Next on Data 360 — from design approval and permissions through to go-live and initial monitoring, contrasted against official Salesforce documentation.",
+            highlights: [
+              "Structured the full path into 13 sequential chapters plus annexes, each sealed by an exit criterion that has to pass before the next one starts.",
+              "Built a five-level classification separating what Salesforce imposes, what this implementation route requires, what the project has to decide, and what the guide only recommends.",
+              "Documented Data 360 enablement, Data Kits and Data Streams, DLO-to-DMO mapping, and Identity Resolution rulesets.",
+              "Covered email domain authentication (SPF, DKIM, DMARC) and IP warm-up, plus the WhatsApp branch through WABA and Meta templates.",
+              "Specified consent handling and Preference Manager, including two alternative routes for feeding consent and how to govern their combination.",
+              "Defined a go-live protocol around a controlled first microcohort, with named owners, stop criteria, and escalation paths.",
+              "Produced an auditable implementation log and a master checklist annex indexing the outcome of every control.",
+              "Annotated 218 individual screenshots and mapped every chapter back to its official Salesforce source.",
+            ],
+            stack: [
+              "Marketing Cloud Next",
+              "Data 360",
+              "Identity Resolution",
+              "Email deliverability",
+              "WhatsApp / WABA",
+              "Consent & Preference Manager",
+              "Audience Flows",
+              "Technical writing",
+            ],
+            context:
+              "Written for Esphera Consulting, close to three months of work (version 3.16, August 2026). Summarized without client data — the document itself is not public.",
+          },
+        },
+        {
           name: "Quoting & Localization Support",
           type: "Production org · InCompany",
           problem:
@@ -405,6 +441,19 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
+          name: "Marketing Cloud",
+          items: [
+            "Marketing Cloud Next",
+            "Data 360",
+            "Identity Resolution",
+            "Consent & Preference Manager",
+            "Email deliverability (SPF, DKIM, DMARC)",
+            "WhatsApp / WABA",
+            "Audience Flows & segmentation",
+            "Email Studio & Journey Builder",
+          ],
+        },
+        {
           name: "Customer & Technical Support",
           items: [
             "Customer retention & service",
@@ -429,15 +478,14 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
-          name: "Web & Marketing Cloud",
+          name: "Web & Documentation",
           items: [
             "HTML, CSS & JavaScript",
             "Web design",
             "Information architecture",
+            "Technical writing & procedures",
             "GitHub",
             "VS Code",
-            "Email Studio",
-            "Journey Builder",
           ],
         },
       ],
@@ -584,6 +632,42 @@ export const content: Record<Locale, SiteContent> = {
       },
       labels: { problem: "Problema", solution: "Solución", result: "Resultado" },
       items: [
+        {
+          name: "Guía de implementación de Marketing Cloud Next",
+          type: "Documentación técnica · Esphera Consulting",
+          problem:
+            "Marketing Cloud Next corre sobre Data 360 y avanza más rápido que su documentación. Los equipos tenían las páginas oficiales, en inglés y dispersas entre releases, pero ningún camino ordenado desde una org vacía hasta el primer envío controlado.",
+          solution:
+            "Escribí un procedimiento operativo de 579 páginas en español: 13 capítulos secuenciales y 3 anexos, cada paso clasificado según quién lo exige, cada capítulo cerrado por un criterio de salida explícito y 218 capturas anotadas.",
+          result:
+            "Un equipo de implementación puede llevar una org desde el diseño aprobado hasta un primer envío monitoreado, dejando registro auditable de cada control del camino.",
+          details: {
+            overview:
+              "Un procedimiento operativo en español para implementar Marketing Cloud Next sobre Data 360 — desde la aprobación del diseño y los permisos hasta el go-live y el monitoreo inicial, contrastado con la documentación oficial de Salesforce.",
+            highlights: [
+              "Estructuré el recorrido completo en 13 capítulos secuenciales más anexos, cada uno cerrado por un criterio de salida que debe cumplirse antes de arrancar el siguiente.",
+              "Definí una clasificación de cinco niveles que separa lo que impone Salesforce, lo que exige esta ruta de implementación, lo que debe decidir el proyecto y lo que la guía solo recomienda.",
+              "Documenté la habilitación de Data 360, Data Kits y Data Streams, el mapeo DLO a DMO y los rulesets de Identity Resolution.",
+              "Cubrí la autenticación del dominio de email (SPF, DKIM, DMARC) y el calentamiento de IP, más la rama de WhatsApp vía WABA y templates de Meta.",
+              "Especifiqué el manejo del consentimiento y Preference Manager, con dos rutas alternativas de alimentación y cómo gobernar su combinación.",
+              "Definí un protocolo de go-live basado en una primera microcohorte controlada, con responsables, criterios de detención y escalamiento.",
+              "Armé un registro de implementación auditable y un anexo de checklist maestro que indexa el resultado de cada control.",
+              "Anoté 218 capturas individuales y mapeé cada capítulo a su fuente oficial de Salesforce.",
+            ],
+            stack: [
+              "Marketing Cloud Next",
+              "Data 360",
+              "Identity Resolution",
+              "Entregabilidad de email",
+              "WhatsApp / WABA",
+              "Consentimiento y Preference Manager",
+              "Audience Flows",
+              "Redacción técnica",
+            ],
+            context:
+              "Escrita para Esphera Consulting, casi tres meses de trabajo (versión 3.16, agosto de 2026). Resumida sin datos del cliente — el documento no es público.",
+          },
+        },
         {
           name: "Quoting & Localization Support",
           type: "Org en producción · InCompany",
@@ -769,6 +853,19 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
+          name: "Marketing Cloud",
+          items: [
+            "Marketing Cloud Next",
+            "Data 360",
+            "Identity Resolution",
+            "Consentimiento y Preference Manager",
+            "Entregabilidad de email (SPF, DKIM, DMARC)",
+            "WhatsApp / WABA",
+            "Audience Flows y segmentación",
+            "Email Studio y Journey Builder",
+          ],
+        },
+        {
           name: "Atención al cliente y soporte técnico",
           items: [
             "Retención y atención al cliente",
@@ -793,15 +890,14 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
         {
-          name: "Web & Marketing Cloud",
+          name: "Web & Documentación",
           items: [
             "HTML, CSS y JavaScript",
             "Diseño web",
             "Arquitectura de información",
+            "Redacción técnica y procedimientos",
             "GitHub",
             "VS Code",
-            "Email Studio",
-            "Journey Builder",
           ],
         },
       ],
