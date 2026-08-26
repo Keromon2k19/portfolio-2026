@@ -226,7 +226,7 @@ export const content: Record<Locale, SiteContent> = {
           problem:
             "Marketing Cloud Next runs on Data 360 and moves faster than its documentation. Teams had official reference pages, in English and scattered across releases, but no ordered path from an empty org to a first controlled send.",
           solution:
-            "Wrote a 579-page operating procedure in Spanish: 13 sequential chapters and 3 annexes, every step classified by who requires it, every chapter closed by an explicit exit criterion, and 218 annotated screenshots.",
+            "Wrote a complete operating procedure in Spanish: 13 sequential chapters and 3 annexes, every step classified by who requires it, every chapter closed by an explicit exit criterion, and 218 annotated screenshots.",
           result:
             "An implementation team can take an org from approved design to a monitored first send, leaving an auditable record of every control along the way.",
           details: {
@@ -638,7 +638,7 @@ export const content: Record<Locale, SiteContent> = {
           problem:
             "Marketing Cloud Next corre sobre Data 360 y avanza más rápido que su documentación. Los equipos tenían las páginas oficiales, en inglés y dispersas entre releases, pero ningún camino ordenado desde una org vacía hasta el primer envío controlado.",
           solution:
-            "Escribí un procedimiento operativo de 579 páginas en español: 13 capítulos secuenciales y 3 anexos, cada paso clasificado según quién lo exige, cada capítulo cerrado por un criterio de salida explícito y 218 capturas anotadas.",
+            "Escribí un procedimiento operativo completo en español: 13 capítulos secuenciales y 3 anexos, cada paso clasificado según quién lo exige, cada capítulo cerrado por un criterio de salida explícito y 218 capturas anotadas.",
           result:
             "Un equipo de implementación puede llevar una org desde el diseño aprobado hasta un primer envío monitoreado, dejando registro auditable de cada control del camino.",
           details: {
