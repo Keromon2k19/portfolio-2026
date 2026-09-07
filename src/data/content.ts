@@ -160,6 +160,19 @@ export const content: Record<Locale, SiteContent> = {
       title: "Salesforce work, built on a decade of support",
       items: [
         {
+          role: "Marketing Cloud Consultant",
+          company: "Esphera Consulting",
+          dates: "Jun 2026 - Aug 2026",
+          place: "Remote",
+          bullets: [
+            "Authored the end-to-end Marketing Cloud Next implementation procedure used by the delivery team: 167 pages, 13 sequential chapters and 3 annexes, contrasted against official Salesforce documentation.",
+            "Documented Data 360 enablement, Data Kits and Data Streams, DLO-to-DMO mapping, and Identity Resolution rulesets.",
+            "Specified email domain authentication (SPF, DKIM, DMARC) and IP warm-up, the WhatsApp channel via WABA and Meta templates, and consent handling through Preference Manager.",
+            "Defined a five-level decision classification separating product requirements, implementation-route requirements, project decisions, and recommendations.",
+            "Built a go-live protocol around a controlled first microcohort, with named owners, stop criteria, and an auditable implementation log.",
+          ],
+        },
+        {
           role: "Salesforce Administrator",
           company: "InCompany",
           dates: "Nov 2025 - May 2026",
@@ -571,6 +584,19 @@ export const content: Record<Locale, SiteContent> = {
       kicker: "Experiencia",
       title: "Trabajo Salesforce, sobre una década de soporte",
       items: [
+        {
+          role: "Marketing Cloud Consultant",
+          company: "Esphera Consulting",
+          dates: "Jun 2026 - Ago 2026",
+          place: "Remoto",
+          bullets: [
+            "Escribí el procedimiento end-to-end de implementación de Marketing Cloud Next usado por el equipo de delivery: 167 páginas, 13 capítulos secuenciales y 3 anexos, contrastados con la documentación oficial de Salesforce.",
+            "Documenté la habilitación de Data 360, Data Kits y Data Streams, el mapeo DLO a DMO y los rulesets de Identity Resolution.",
+            "Especifiqué la autenticación del dominio de email (SPF, DKIM, DMARC) y el calentamiento de IP, el canal de WhatsApp vía WABA y templates de Meta, y el manejo del consentimiento con Preference Manager.",
+            "Definí una clasificación de decisiones de cinco niveles que separa requisitos del producto, requisitos de la ruta de implementación, decisiones del proyecto y recomendaciones.",
+            "Armé un protocolo de go-live sobre una primera microcohorte controlada, con responsables, criterios de detención y un registro de implementación auditable.",
+          ],
+        },
         {
           role: "Salesforce Administrator",
           company: "InCompany",
