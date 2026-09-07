@@ -125,7 +125,7 @@ export interface SiteContent {
 export const content: Record<Locale, SiteContent> = {
   en: {
     meta: {
-      title: "Joaquin Haro Filippon — Salesforce Administrator & Developer",
+      title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
         "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. CRM data, Flows, reporting, documentation, and web design.",
       path: "/",
@@ -162,7 +162,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Administrator",
           company: "InCompany",
-          dates: "Nov 2025 – May 2026",
+          dates: "Nov 2025 - May 2026",
           place: "Remote · Internship",
           bullets: [
             "Audited and corrected record data across multiple objects, resolving inconsistencies and duplicates to restore reporting integrity.",
@@ -175,7 +175,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Developer & Administrator",
           company: "CloudAvengers",
-          dates: "Nov 2024 – Apr 2025",
+          dates: "Nov 2024 - Apr 2025",
           place: "Remote",
           bullets: [
             "Built and maintained custom data architecture for end-to-end business process tracking in a client org.",
@@ -186,18 +186,18 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Independent Technical & Customer Support",
           company: "Self-employed",
-          dates: "2016 – Present",
+          dates: "2016 - Present",
           place: "Esquel, Argentina",
           bullets: [
-            "Provide end-to-end technical and customer support to individuals and small businesses — diagnosing hardware and software issues and coordinating service follow-up.",
+            "Provide end-to-end technical and customer support to individuals and small businesses, diagnosing hardware and software issues and coordinating service follow-up.",
             "Communicate solutions in plain language and document every issue and next step, sustaining a referral-based client base for nearly a decade.",
-            "Scope and quote each job to the client's budget and needs — from one-off fixes to ongoing support.",
+            "Scope and quote each job to the client's budget and needs, from one-off fixes to ongoing support.",
           ],
         },
         {
           role: "Computer Technician & Customer Support",
           company: "Infinitech",
-          dates: "Jun 2017 – Aug 2021",
+          dates: "Jun 2017 - Aug 2021",
           place: "Esquel, Chubut",
           bullets: [
             "Delivered front-line customer service and technical support in a repair shop, handling intake and resolving issues for notebooks, PCs, and gaming consoles.",
@@ -231,7 +231,7 @@ export const content: Record<Locale, SiteContent> = {
             "An implementation team can take an org from approved design to a monitored first send, leaving an auditable record of every control along the way.",
           details: {
             overview:
-              "A Spanish-language operating procedure for implementing Marketing Cloud Next on Data 360 — from design approval and permissions through to go-live and initial monitoring, contrasted against official Salesforce documentation.",
+              "A Spanish-language operating procedure for implementing Marketing Cloud Next on Data 360: from design approval and permissions through to go-live and initial monitoring, contrasted against official Salesforce documentation.",
             highlights: [
               "Structured the full path into 13 sequential chapters plus annexes, each sealed by an exit criterion that has to pass before the next one starts.",
               "Built a five-level classification separating what Salesforce imposes, what this implementation route requires, what the project has to decide, and what the guide only recommends.",
@@ -253,7 +253,7 @@ export const content: Record<Locale, SiteContent> = {
               "Technical writing",
             ],
             context:
-              "Written for Esphera Consulting, close to three months of work (version 3.16, August 2026). Summarized without client data — the document itself is not public.",
+              "Written for Esphera Consulting, close to three months of work (version 3.16, August 2026). Summarized without client data. The document itself is not public.",
           },
         },
         {
@@ -284,7 +284,7 @@ export const content: Record<Locale, SiteContent> = {
               "Documentation",
             ],
             context:
-              "Internship, remote (Nov 2025 – May 2026). Private production work, summarized without client data — no public repo.",
+              "Internship, remote (Nov 2025 - May 2026). Private production work, summarized without client data. No public repo.",
           },
         },
         {
@@ -311,7 +311,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remote (Nov 2024 – Apr 2025). Client work summarized without sensitive details — no public repo.",
+              "Remote (Nov 2024 - Apr 2025). Client work summarized without sensitive details. No public repo.",
           },
         },
         {
@@ -340,7 +340,7 @@ export const content: Record<Locale, SiteContent> = {
               "SFDX",
             ],
             context:
-              "Salesforce Developer bootcamp (Plataforma 5 – CloudGaia, 2023). Real client delivery in a collaborative Scrum team, ~6-week window.",
+              "Salesforce Developer bootcamp (Plataforma 5 - CloudGaia, 2023). Real client delivery in a collaborative Scrum team, ~6-week window.",
           },
         },
         {
@@ -354,7 +354,7 @@ export const content: Record<Locale, SiteContent> = {
             "A role-aware org with progress dashboards and strong data integrity rules.",
           details: {
             overview:
-              "A Salesforce org that models an e-learning experience for students and teachers — courses, enrollments, and progress — with role-based access enforced from the ground up.",
+              "A Salesforce org that models an e-learning experience for students and teachers (courses, enrollments, and progress) with role-based access enforced from the ground up.",
             highlights: [
               "Modeled courses, enrollments, and progress data from scratch with custom objects.",
               "Enforced separate student and teacher access with profiles and permission sets, with no overlap.",
@@ -369,21 +369,21 @@ export const content: Record<Locale, SiteContent> = {
               "SFDX",
             ],
             context:
-              "Salesforce configuration project during the bootcamp (Plataforma 5 – CloudGaia, 2023). Focus on data modeling and role-based security.",
+              "Salesforce configuration project during the bootcamp (Plataforma 5 - CloudGaia, 2023). Focus on data modeling and role-based security.",
           },
         },
         {
           name: "Recuerdos de Cobre",
           type: "Web design · Personal project",
           problem:
-            "A long-running tabletop RPG campaign kept generating lore, characters, and session history — a growing pile of information with nowhere organized to live.",
+            "A long-running tabletop RPG campaign kept generating lore, characters, and session history, a growing pile of information with nowhere organized to live.",
           solution:
-            "Designed and built a web archive that structures it all: chronicles, an atlas of characters, factions and places, and a knowledge base — with clear navigation and a consistent taxonomy.",
+            "Designed and built a web archive that structures it all: chronicles, an atlas of characters, factions and places, and a knowledge base, with clear navigation and a consistent taxonomy.",
           result:
             "Players and the game master browse the whole world from one place, and the content stays organized as it keeps growing.",
           details: {
             overview:
-              "A web archive for the 'Recuerdos de Cobre' tabletop RPG campaign — worldbuilding, session chronicles, and lore, organized so a large, growing story stays navigable.",
+              "A web archive for the 'Recuerdos de Cobre' tabletop RPG campaign: worldbuilding, session chronicles, and lore, organized so a large, growing story stays navigable.",
             highlights: [
               "Structured a large body of narrative into a clear information architecture (Chronicles, Atlas, Knowledge).",
               "Designed a cohesive dark theme with custom branding and artwork.",
@@ -398,7 +398,7 @@ export const content: Record<Locale, SiteContent> = {
               "Vercel",
             ],
             context:
-              "Personal project — an ongoing worldbuilding and web-design exercise. Live and actively expanding.",
+              "Personal project: an ongoing worldbuilding and web-design exercise. Live and actively expanding.",
           },
           liveUrl: "https://recuerdos-de-cobre.vercel.app/",
         },
@@ -502,18 +502,18 @@ export const content: Record<Locale, SiteContent> = {
           linkLabel: "View Trailblazer profile",
         },
         {
-          name: "Marketing Cloud Essentials — Level 1",
+          name: "Marketing Cloud Essentials: Level 1",
           issuer: "Orange Academy",
           detail: "Email Studio and Marketing Cloud fundamentals.",
         },
         {
-          name: "Marketing Cloud Essentials — Level 2",
+          name: "Marketing Cloud Essentials: Level 2",
           issuer: "Orange Academy",
           detail: "Journey design and applied Marketing Cloud practice.",
         },
         {
-          name: "Salesforce Developer Bootcamp — 800+ hours",
-          issuer: "Plataforma 5 – CloudGaia",
+          name: "Salesforce Developer Bootcamp (800+ hours)",
+          issuer: "Plataforma 5 - CloudGaia",
           detail: "Intensive admin & development training with real client delivery.",
         },
       ],
@@ -537,7 +537,7 @@ export const content: Record<Locale, SiteContent> = {
   },
   es: {
     meta: {
-      title: "Joaquin Haro Filippon — Salesforce Administrator & Developer",
+      title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
         "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Datos CRM, Flows, reporting, documentación y diseño web.",
       path: "/es/",
@@ -574,7 +574,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Administrator",
           company: "InCompany",
-          dates: "Nov 2025 – May 2026",
+          dates: "Nov 2025 - May 2026",
           place: "Remoto · Pasantía",
           bullets: [
             "Audité y corregí datos de registros en múltiples objetos, resolviendo inconsistencias y duplicados para restaurar la integridad del reporting.",
@@ -587,7 +587,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Developer & Administrator",
           company: "CloudAvengers",
-          dates: "Nov 2024 – Abr 2025",
+          dates: "Nov 2024 - Abr 2025",
           place: "Remoto",
           bullets: [
             "Construí y mantuve arquitectura de datos custom para el seguimiento de procesos de negocio en una org de cliente.",
@@ -598,18 +598,18 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Soporte técnico y al cliente independiente",
           company: "Autónomo",
-          dates: "2016 – Presente",
+          dates: "2016 - Presente",
           place: "Esquel, Argentina",
           bullets: [
-            "Brindo soporte técnico y atención al cliente end-to-end a personas y pequeños negocios — diagnóstico de hardware y software y coordinación del seguimiento del servicio.",
+            "Brindo soporte técnico y atención al cliente end-to-end a personas y pequeños negocios: diagnóstico de hardware y software y coordinación del seguimiento del servicio.",
             "Comunico soluciones en lenguaje claro y documento cada problema y próximo paso, sosteniendo una base de clientes por recomendación durante casi una década.",
-            "Cotizo y dimensiono cada trabajo según el presupuesto y las necesidades de cada cliente — desde arreglos puntuales hasta soporte continuo.",
+            "Cotizo y dimensiono cada trabajo según el presupuesto y las necesidades de cada cliente, desde arreglos puntuales hasta soporte continuo.",
           ],
         },
         {
           role: "Técnico y atención al cliente",
           company: "Infinitech",
-          dates: "Jun 2017 – Ago 2021",
+          dates: "Jun 2017 - Ago 2021",
           place: "Esquel, Chubut",
           bullets: [
             "Di atención al cliente y soporte técnico de primera línea en un local de reparación, gestionando la recepción y resolviendo casos de notebooks, PCs y consolas.",
@@ -643,7 +643,7 @@ export const content: Record<Locale, SiteContent> = {
             "Un equipo de implementación puede llevar una org desde el diseño aprobado hasta un primer envío monitoreado, dejando registro auditable de cada control del camino.",
           details: {
             overview:
-              "Un procedimiento operativo en español para implementar Marketing Cloud Next sobre Data 360 — desde la aprobación del diseño y los permisos hasta el go-live y el monitoreo inicial, contrastado con la documentación oficial de Salesforce.",
+              "Un procedimiento operativo en español para implementar Marketing Cloud Next sobre Data 360: desde la aprobación del diseño y los permisos hasta el go-live y el monitoreo inicial, contrastado con la documentación oficial de Salesforce.",
             highlights: [
               "Estructuré el recorrido completo en 13 capítulos secuenciales más anexos, cada uno cerrado por un criterio de salida que debe cumplirse antes de arrancar el siguiente.",
               "Definí una clasificación de cinco niveles que separa lo que impone Salesforce, lo que exige esta ruta de implementación, lo que debe decidir el proyecto y lo que la guía solo recomienda.",
@@ -665,7 +665,7 @@ export const content: Record<Locale, SiteContent> = {
               "Redacción técnica",
             ],
             context:
-              "Escrita para Esphera Consulting, casi tres meses de trabajo (versión 3.16, agosto de 2026). Resumida sin datos del cliente — el documento no es público.",
+              "Escrita para Esphera Consulting, casi tres meses de trabajo (versión 3.16, agosto de 2026). Resumida sin datos del cliente. El documento no es público.",
           },
         },
         {
@@ -696,7 +696,7 @@ export const content: Record<Locale, SiteContent> = {
               "Documentación",
             ],
             context:
-              "Pasantía, remoto (Nov 2025 – May 2026). Trabajo privado en producción, resumido sin datos del cliente — sin repo público.",
+              "Pasantía, remoto (Nov 2025 - May 2026). Trabajo privado en producción, resumido sin datos del cliente. Sin repo público.",
           },
         },
         {
@@ -723,7 +723,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remoto (Nov 2024 – Abr 2025). Trabajo de cliente resumido sin detalles sensibles — sin repo público.",
+              "Remoto (Nov 2024 - Abr 2025). Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
           },
         },
         {
@@ -752,7 +752,7 @@ export const content: Record<Locale, SiteContent> = {
               "SFDX",
             ],
             context:
-              "Bootcamp Salesforce Developer (Plataforma 5 – CloudGaia, 2023). Entrega a cliente real en un equipo Scrum colaborativo, ventana de ~6 semanas.",
+              "Bootcamp Salesforce Developer (Plataforma 5 - CloudGaia, 2023). Entrega a cliente real en un equipo Scrum colaborativo, ventana de ~6 semanas.",
           },
         },
         {
@@ -766,7 +766,7 @@ export const content: Record<Locale, SiteContent> = {
             "Una org con roles bien separados, dashboards de progreso y reglas fuertes de integridad de datos.",
           details: {
             overview:
-              "Una org Salesforce que modela una experiencia de e-learning para estudiantes y docentes — cursos, inscripciones y progreso — con acceso por rol aplicado desde la base.",
+              "Una org Salesforce que modela una experiencia de e-learning para estudiantes y docentes (cursos, inscripciones y progreso) con acceso por rol aplicado desde la base.",
             highlights: [
               "Modelé cursos, inscripciones y datos de progreso desde cero con objetos custom.",
               "Apliqué acceso separado para estudiantes y docentes con profiles y permission sets, sin superposición.",
@@ -781,21 +781,21 @@ export const content: Record<Locale, SiteContent> = {
               "SFDX",
             ],
             context:
-              "Proyecto de configuración Salesforce durante el bootcamp (Plataforma 5 – CloudGaia, 2023). Foco en modelado de datos y seguridad por rol.",
+              "Proyecto de configuración Salesforce durante el bootcamp (Plataforma 5 - CloudGaia, 2023). Foco en modelado de datos y seguridad por rol.",
           },
         },
         {
           name: "Recuerdos de Cobre",
           type: "Diseño web · Proyecto personal",
           problem:
-            "Una campaña de rol de mesa de larga duración generaba lore, personajes e historia de sesiones — una pila creciente de información sin un lugar ordenado donde vivir.",
+            "Una campaña de rol de mesa de larga duración generaba lore, personajes e historia de sesiones, una pila creciente de información sin un lugar ordenado donde vivir.",
           solution:
-            "Diseñé y construí un archivo web que estructura todo: crónicas, un atlas de personajes, facciones y lugares, y una base de conocimiento — con navegación clara y una taxonomía consistente.",
+            "Diseñé y construí un archivo web que estructura todo: crónicas, un atlas de personajes, facciones y lugares, y una base de conocimiento, con navegación clara y una taxonomía consistente.",
           result:
             "Jugadores y máster recorren todo el mundo desde un solo lugar, y el contenido se mantiene ordenado a medida que crece.",
           details: {
             overview:
-              "Un archivo web para la campaña de rol 'Recuerdos de Cobre' — worldbuilding, crónicas de sesión y lore, organizados para que una historia grande y en crecimiento siga siendo navegable.",
+              "Un archivo web para la campaña de rol 'Recuerdos de Cobre': worldbuilding, crónicas de sesión y lore, organizados para que una historia grande y en crecimiento siga siendo navegable.",
             highlights: [
               "Estructuré un gran volumen de narrativa en una arquitectura de información clara (Crónicas, Atlas, Conocimiento).",
               "Diseñé un tema oscuro cohesivo con identidad y arte propios.",
@@ -810,7 +810,7 @@ export const content: Record<Locale, SiteContent> = {
               "Vercel",
             ],
             context:
-              "Proyecto personal — un ejercicio continuo de worldbuilding y diseño web. En vivo y en expansión activa.",
+              "Proyecto personal: un ejercicio continuo de worldbuilding y diseño web. En vivo y en expansión activa.",
           },
           liveUrl: "https://recuerdos-de-cobre.vercel.app/",
         },
@@ -914,18 +914,18 @@ export const content: Record<Locale, SiteContent> = {
           linkLabel: "Ver perfil Trailblazer",
         },
         {
-          name: "Marketing Cloud Essentials — Nivel 1",
+          name: "Marketing Cloud Essentials: Nivel 1",
           issuer: "Orange Academy",
           detail: "Fundamentos de Email Studio y Marketing Cloud.",
         },
         {
-          name: "Marketing Cloud Essentials — Nivel 2",
+          name: "Marketing Cloud Essentials: Nivel 2",
           issuer: "Orange Academy",
           detail: "Diseño de journeys y práctica aplicada en Marketing Cloud.",
         },
         {
-          name: "Salesforce Developer Bootcamp — 800+ horas",
-          issuer: "Plataforma 5 – CloudGaia",
+          name: "Salesforce Developer Bootcamp (800+ horas)",
+          issuer: "Plataforma 5 - CloudGaia",
           detail: "Formación intensiva en administración y desarrollo con entrega a cliente real.",
         },
       ],

@@ -1,4 +1,4 @@
-# Joaquin Haro Filippon — Portfolio
+# Joaquin Haro Filippon | Portfolio
 
 Bilingual (EN/ES) portfolio for a Salesforce Administrator & Developer.
 Static site: zero framework JavaScript, Salesforce-inspired palette.
@@ -22,6 +22,6 @@ npm run preview
 
 ## Structure
 
-- `src/data/content.ts` — all EN/ES copy, typed (single source of truth)
-- `src/components/` — one section per component
+- `src/data/content.ts`: all EN/ES copy, typed (single source of truth)
+- `src/components/`: one section per component
 - `/` English (default) · `/es/` Spanish

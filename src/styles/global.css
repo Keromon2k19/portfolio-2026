@@ -112,7 +112,7 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* Scroll reveals — only when JS is on and the user allows motion.
+/* Scroll reveals: only when JS is on and the user allows motion.
    Without either, content is fully visible with no transform. */
 @media (prefers-reduced-motion: no-preference) {
   html.js .reveal {

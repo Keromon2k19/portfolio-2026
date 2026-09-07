@@ -4,13 +4,13 @@
 
 **Goal:** Construir de cero el portfolio bilingüe (EN default, ES) de Joaquin Haro Filippon con Astro 7 + Tailwind 4.3, dirección visual "Hero navy" (paleta Salesforce), 100% estático, y dejarlo listo para deploy en Netlify reemplazando el sitio viejo.
 
-**Architecture:** Sitio one-page por idioma (`/` EN, `/es/` ES) generado estáticamente. Todo el contenido vive tipado en `src/data/content.ts`; los componentes Astro solo renderizan datos. Cero JavaScript de framework — el único JS del sitio es el toggle del menú móvil. Tokens de color en `@theme` de Tailwind 4.
+**Architecture:** Sitio one-page por idioma (`/` EN, `/es/` ES) generado estáticamente. Todo el contenido vive tipado en `src/data/content.ts`; los componentes Astro solo renderizan datos. Cero JavaScript de framework. El único JS del sitio es el toggle del menú móvil. Tokens de color en `@theme` de Tailwind 4.
 
 **Tech Stack:** Astro 7 (7.0.x), Tailwind CSS 4.3 (`@tailwindcss/vite`), TypeScript estricto, `@astrojs/sitemap`, `@astrojs/check`, Inter variable self-hosted, Netlify (hosting + Forms), sharp (solo devDep para generar imágenes OG una vez).
 
-**Spec de referencia:** `docs/superpowers/specs/2026-07-20-portfolio-redesign-design.md` — leerlo antes de empezar.
+**Spec de referencia:** `docs/superpowers/specs/2026-07-20-portfolio-redesign-design.md`: leerlo antes de empezar.
 
-**Contexto del entorno:** Windows 11, PowerShell como shell primario (no existe `&&` en PowerShell 5.1 — usar `;` o líneas separadas). El repo git ya está iniciado en la raíz con el spec commiteado. La carpeta contiene un proyecto Astro viejo de mayo 2026 que hay que archivar primero (Task 1). El CV PDF `public/docs/joaquin-haro-filippon-salesforce-cv-2026.pdf` DEBE sobrevivir a la limpieza.
+**Contexto del entorno:** Windows 11, PowerShell como shell primario (no existe `&&` en PowerShell 5.1, usar `;` o líneas separadas). El repo git ya está iniciado en la raíz con el spec commiteado. La carpeta contiene un proyecto Astro viejo de mayo 2026 que hay que archivar primero (Task 1). El CV PDF `public/docs/joaquin-haro-filippon-salesforce-cv-2026.pdf` DEBE sobrevivir a la limpieza.
 
 ---
 
@@ -297,7 +297,7 @@ git commit -m "chore: scaffold Astro 7 + Tailwind 4.3 + config de deploy"
 
 ---
 
-### Task 3: Capa de datos — content.ts completo
+### Task 3: Capa de datos (content.ts completo)
 
 **Files:**
 - Create: `src/data/content.ts`
@@ -420,7 +420,7 @@ export interface SiteContent {
 export const content: Record<Locale, SiteContent> = {
   en: {
     meta: {
-      title: "Joaquin Haro Filippon — Salesforce Administrator & Developer",
+      title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
         "Salesforce Administrator & Developer from Argentina. CRM data quality, Flows, reporting, documentation, and Spanish localization for real orgs.",
       path: "/",
@@ -440,7 +440,7 @@ export const content: Record<Locale, SiteContent> = {
     hero: {
       eyebrow: "Salesforce portfolio",
       title: "Salesforce Administrator & Developer",
-      lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation — in English and Spanish.",
+      lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation, in English and Spanish.",
       availability: "Remote from Argentina · Spanish native · English B2",
       ctaProjects: "View projects",
       ctaCv: "Download CV",
@@ -457,7 +457,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Administrator",
           company: "InCompany",
-          dates: "Nov 2025 – May 2026",
+          dates: "Nov 2025 - May 2026",
           place: "Remote · Internship",
           bullets: [
             "Audited and corrected record data across multiple objects, resolving inconsistencies and duplicates to restore reporting integrity.",
@@ -470,7 +470,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Developer & Administrator",
           company: "CloudAvengers",
-          dates: "Nov 2024 – Apr 2025",
+          dates: "Nov 2024 - Apr 2025",
           place: "Remote",
           bullets: [
             "Built and maintained custom data architecture for end-to-end business process tracking in a client org.",
@@ -481,7 +481,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Computer Technician",
           company: "Infinitech",
-          dates: "Jun 2017 – Aug 2021",
+          dates: "Jun 2017 - Aug 2021",
           place: "Esquel, Chubut",
           bullets: [
             "Diagnosed and resolved hardware and software issues for a high-volume client base, from intake to resolution.",
@@ -506,7 +506,7 @@ export const content: Record<Locale, SiteContent> = {
             "Configured custom objects and fields, improved Account layouts, corrected records, localized metadata, and wrote end-to-end documentation.",
           result:
             "Non-technical users got a clear operating reference, and reporting became easier to trust.",
-          private: "Private production work — no public repo.",
+          private: "Private production work. No public repo.",
         },
         {
           name: "Reporting & Automation Layer",
@@ -603,18 +603,18 @@ export const content: Record<Locale, SiteContent> = {
           linkLabel: "View Trailblazer profile",
         },
         {
-          name: "Marketing Cloud Essentials — Level 1",
+          name: "Marketing Cloud Essentials: Level 1",
           issuer: "Orange Academy",
           detail: "Email Studio and Marketing Cloud fundamentals.",
         },
         {
-          name: "Marketing Cloud Essentials — Level 2",
+          name: "Marketing Cloud Essentials: Level 2",
           issuer: "Orange Academy",
           detail: "Journey design and applied Marketing Cloud practice.",
         },
         {
-          name: "Salesforce Developer Bootcamp — 800+ hours",
-          issuer: "Plataforma 5 – CloudGaia",
+          name: "Salesforce Developer Bootcamp (800+ hours)",
+          issuer: "Plataforma 5 - CloudGaia",
           detail: "Intensive admin & development training with real client delivery.",
         },
       ],
@@ -638,7 +638,7 @@ export const content: Record<Locale, SiteContent> = {
   },
   es: {
     meta: {
-      title: "Joaquin Haro Filippon — Salesforce Administrator & Developer",
+      title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
         "Salesforce Administrator & Developer desde Argentina. Calidad de datos CRM, Flows, reporting, documentación y localización al español para orgs reales.",
       path: "/es/",
@@ -658,7 +658,7 @@ export const content: Record<Locale, SiteContent> = {
     hero: {
       eyebrow: "Portfolio Salesforce",
       title: "Salesforce Administrator & Developer",
-      lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación — en inglés y español.",
+      lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación, en inglés y español.",
       availability: "Remoto desde Argentina · Español nativo · Inglés B2",
       ctaProjects: "Ver proyectos",
       ctaCv: "Descargar CV",
@@ -675,7 +675,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Administrator",
           company: "InCompany",
-          dates: "Nov 2025 – May 2026",
+          dates: "Nov 2025 - May 2026",
           place: "Remoto · Pasantía",
           bullets: [
             "Audité y corregí datos de registros en múltiples objetos, resolviendo inconsistencias y duplicados para restaurar la integridad del reporting.",
@@ -688,7 +688,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Salesforce Developer & Administrator",
           company: "CloudAvengers",
-          dates: "Nov 2024 – Abr 2025",
+          dates: "Nov 2024 - Abr 2025",
           place: "Remoto",
           bullets: [
             "Construí y mantuve arquitectura de datos custom para el seguimiento de procesos de negocio en una org de cliente.",
@@ -699,7 +699,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           role: "Técnico informático",
           company: "Infinitech",
-          dates: "Jun 2017 – Ago 2021",
+          dates: "Jun 2017 - Ago 2021",
           place: "Esquel, Chubut",
           bullets: [
             "Diagnostiqué y resolví problemas de hardware y software para una base alta de clientes, de la recepción a la entrega.",
@@ -724,7 +724,7 @@ export const content: Record<Locale, SiteContent> = {
             "Configuré objetos y campos custom, mejoré layouts de Account, corregí registros, localicé metadata y escribí documentación end-to-end.",
           result:
             "Los usuarios no técnicos ganaron una referencia clara de operación y el reporting se volvió confiable.",
-          private: "Trabajo privado en producción — sin repo público.",
+          private: "Trabajo privado en producción. Sin repo público.",
         },
         {
           name: "Reporting & Automation Layer",
@@ -821,18 +821,18 @@ export const content: Record<Locale, SiteContent> = {
           linkLabel: "Ver perfil Trailblazer",
         },
         {
-          name: "Marketing Cloud Essentials — Nivel 1",
+          name: "Marketing Cloud Essentials: Nivel 1",
           issuer: "Orange Academy",
           detail: "Fundamentos de Email Studio y Marketing Cloud.",
         },
         {
-          name: "Marketing Cloud Essentials — Nivel 2",
+          name: "Marketing Cloud Essentials: Nivel 2",
           issuer: "Orange Academy",
           detail: "Diseño de journeys y práctica aplicada en Marketing Cloud.",
         },
         {
-          name: "Salesforce Developer Bootcamp — 800+ horas",
-          issuer: "Plataforma 5 – CloudGaia",
+          name: "Salesforce Developer Bootcamp (800+ horas)",
+          issuer: "Plataforma 5 - CloudGaia",
           detail: "Formación intensiva en administración y desarrollo con entrega a cliente real.",
         },
       ],
@@ -1899,7 +1899,7 @@ const c = content.en;
   <main id="main" class="mx-auto flex max-w-5xl flex-col items-start gap-4 px-4 py-24 sm:px-6">
     <h1 class="text-3xl font-bold text-navy">Message sent</h1>
     <p class="max-w-md text-slate">
-      Thanks for reaching out — I'll reply as soon as possible.
+      Thanks for reaching out. I'll reply as soon as possible.
     </p>
     <a href="/" class="rounded-md bg-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-dark">
       Back to home
@@ -1921,7 +1921,7 @@ const c = content.es;
 <SiteLayout locale="es" c={c}>
   <main id="main" class="mx-auto flex max-w-5xl flex-col items-start gap-4 px-4 py-24 sm:px-6">
     <h1 class="text-3xl font-bold text-navy">Mensaje enviado</h1>
-    <p class="max-w-md text-slate">Gracias por escribirme — te respondo lo antes posible.</p>
+    <p class="max-w-md text-slate">Gracias por escribirme. Te respondo lo antes posible.</p>
     <a
       href="/es/"
       class="rounded-md bg-blue px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-dark"
@@ -2037,7 +2037,7 @@ Expected: `OG images generated`; existen `public/og/og-en.png` y `public/og/og-e
 - [ ] **Step 4: Crear README.md**
 
 ````markdown
-# Joaquin Haro Filippon — Portfolio
+# Joaquin Haro Filippon | Portfolio
 
 Bilingual (EN/ES) portfolio for a Salesforce Administrator & Developer.
 Static site: zero framework JavaScript, Salesforce-inspired palette.
@@ -2061,8 +2061,8 @@ npm run preview
 
 ## Structure
 
-- `src/data/content.ts` — all EN/ES copy, typed (single source of truth)
-- `src/components/` — one section per component
+- `src/data/content.ts`: all EN/ES copy, typed (single source of truth)
+- `src/components/`: one section per component
 - `/` English (default) · `/es/` Spanish
 ````
 
@@ -2101,7 +2101,7 @@ Usar el Browser pane del harness: `preview_start` con `{name: "portfolio"}` (usa
 - Nav ancla a cada sección; toggle "Español" lleva a `/es/`.
 - "Download CV" descarga el PDF.
 - Los 2 links de GitHub de proyectos abren los repos.
-- Form presente con labels; submit local NO funciona (Netlify Forms solo procesa deployado — esperado).
+- Form presente con labels; submit local NO funciona (Netlify Forms solo procesa deployado, esperado).
 
 - [ ] **Step 3: Verificación funcional ES** (`/es/`)
 
@@ -2115,7 +2115,7 @@ Redimensionar a 375px de ancho: aparece el botón hamburguesa, abre/cierra el me
 
 - Tab desde el inicio: primer foco = skip link visible.
 - Todos los inputs del form tienen label asociado.
-- Contraste: texto `#B9CBE0` sobre `#032D60` y blanco sobre `#0176D3` — verificar con el checker del navegador que cumplen AA (≥4.5:1 texto normal).
+- Contraste: texto `#B9CBE0` sobre `#032D60` y blanco sobre `#0176D3`. Verificar con el checker del navegador que cumplen AA (≥4.5:1 texto normal).
 
 - [ ] **Step 6: Lighthouse**
 
@@ -2153,7 +2153,7 @@ gh repo create portfolio-2026 --public --source . --push
 ```
 Expected: repo `Keromon2k19/portfolio-2026` creado con la rama `main` pusheada.
 
-- [ ] **Step 3: PARAR — confirmación del usuario**
+- [ ] **Step 3: PARAR, confirmación del usuario**
 
 **No deployar sin confirmación explícita de Joaquin en el chat.** El deploy a Netlify reemplaza el sitio viejo en `joaquinharofilipponportfolio.netlify.app`. Preguntar y esperar el OK.
 
@@ -2177,7 +2177,7 @@ En https://app.netlify.com → sitio existente `joaquinharofilipponportfolio` �
 Pase de reglas de diseño aplicado sobre el código del plan (2026-07-20, a pedido del usuario):
 
 - **Touch targets ≥44px**: menú móvil (links `py-3`), botón hamburguesa (`h-11 w-11`), toggle idioma (`py-2` mobile), inputs (`py-3`), links directos de contacto (`min-h-11`), CTAs (`py-3`). Regla `touch-target-size`.
-- **Micro-transiciones**: `transition-colors` (~150ms default de Tailwind) en todo elemento interactivo. NO son animaciones de entrada — el spec sigue prohibiéndolas. Reglas `state-transition`, anti-pattern "instant state changes".
+- **Micro-transiciones**: `transition-colors` (~150ms default de Tailwind) en todo elemento interactivo. NO son animaciones de entrada. El spec sigue prohibiéndolas. Reglas `state-transition`, anti-pattern "instant state changes".
 - **Un solo CTA primario por vista**: el "Download CV" del header pasó a outline; el único botón azul sólido above-the-fold es "View projects" del hero. Regla `primary-action`.
 - **Body ≥16px**: `text-base` en bullets, case studies y skills (antes 15px). Regla `readable-font-size`.
 - **Form**: `autocomplete` en name/email, asteriscos de requerido (`required-indicators`), `focus:border-blue`, teclado semántico via `type="email"`.
@@ -2190,5 +2190,5 @@ Pase de reglas de diseño aplicado sobre el código del plan (2026-07-20, a pedi
 ## Self-Review del plan (hecho al escribirlo)
 
 1. **Cobertura del spec:** estructura one-page ✓ (Tasks 5-10), i18n EN default ✓ (Task 2 config + páginas), visual Hero navy ✓ (Task 6), tokens ✓ (Task 4), Inter self-hosted ✓ (Tasks 2/4), Netlify Forms + honeypot + thanks ✓ (Task 10), 404 bilingüe ✓ (Task 11), OG/SEO/sitemap/robots ✓ (Tasks 2/4/11), a11y + Lighthouse ≥95 ✓ (Task 12), git/GitHub/Netlify con gate ✓ (Tasks 1/13), archivo de mayo ✓ (Task 1), README ✓ (Task 11), cero animaciones de entrada ✓ (ningún task las introduce).
-2. **Placeholders:** ninguno — todo código completo.
+2. **Placeholders:** ninguno, todo código completo.
 3. **Consistencia de tipos:** `SiteContent`/`Locale` definidos en Task 3 y usados con el mismo shape en Tasks 4-11; props `{ locale, c }` para SiteLayout/Header y `{ c }` para el resto, consistente en todas las páginas.

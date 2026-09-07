@@ -1,4 +1,4 @@
-# Portfolio 2026 — Rediseño desde cero (Design Doc)
+# Portfolio 2026: Rediseño desde cero (Design Doc)
 
 **Fecha:** 2026-07-20
 **Estado:** Aprobado por Joaquin en sesión de brainstorming
@@ -31,10 +31,10 @@ Una sola página con scroll por idioma. Secciones en orden:
 
 1. **Header** (fijo): nombre, links de navegación por anchor (Experience / Projects / Skills / Credentials / Contact), toggle EN·ES, CTA "Download CV". Menú hamburguesa en mobile (único JS del sitio, vanilla, ~1KB).
 2. **Hero** (banda navy `#032D60`): eyebrow, H1 "Salesforce Administrator & Developer", pitch de 2 líneas, availability ("Remote from Argentina | Spanish native | English B2"), CTAs "View projects" (azul sólido) y "Download CV" (outline claro), fila de 3 métricas: `1+ year` experiencia / `800+ hrs` bootcamp / `3` credenciales.
-3. **Experiencia** (timeline vertical): InCompany (Salesforce Administrator, pasantía, Nov 2025–May 2026), CloudAvengers (SF Developer & Admin, Nov 2024–Abr 2025), Infinitech (Computer Technician, Jun 2017–Ago 2021). Bullets del CV.
+3. **Experiencia** (timeline vertical): InCompany (Salesforce Administrator, pasantía, Nov 2025-May 2026), CloudAvengers (SF Developer & Admin, Nov 2024-Abr 2025), Infinitech (Computer Technician, Jun 2017-Ago 2021). Bullets del CV.
 4. **Proyectos** (4 case studies, formato problema → solución → resultado): InCompany Quoting & Localization (privado), CloudAvengers Reporting & Automation (privado), CloudConsulting Project Management App (link GitHub), E-Learning Platform (link GitHub). Los privados llevan nota de confidencialidad.
 5. **Skills** (4 grupos del CV): Salesforce Platform / CRM Data & Revenue Ops / Salesforce Development / Tools, Web & Marketing Cloud.
-6. **Certificaciones**: Salesforce Certified Associate (link Trailblazer), Marketing Cloud Essentials 1 y 2 (Orange Academy), Bootcamp 800+ hrs (Plataforma 5 – CloudGaia).
+6. **Certificaciones**: Salesforce Certified Associate (link Trailblazer), Marketing Cloud Essentials 1 y 2 (Orange Academy), Bootcamp 800+ hrs (Plataforma 5 - CloudGaia).
 7. **Contacto**: formulario (nombre, email, mensaje) + links directos: email, LinkedIn, GitHub, Trailblazer, WhatsApp.
 8. **Footer**: copyright, nota de stack, links mínimos.
 
