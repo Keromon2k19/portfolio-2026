@@ -127,7 +127,7 @@ export const content: Record<Locale, SiteContent> = {
     meta: {
       title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
-        "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. CRM data, Flows, reporting, documentation, and web design.",
+        "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. Marketing Cloud, CRM data, Flows, and reporting.",
       path: "/",
       altPath: "/es/",
       altLabel: "Español",
@@ -552,7 +552,7 @@ export const content: Record<Locale, SiteContent> = {
     meta: {
       title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
-        "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Datos CRM, Flows, reporting, documentación y diseño web.",
+        "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Marketing Cloud, datos CRM, Flows y reporting.",
       path: "/es/",
       altPath: "/",
       altLabel: "English",

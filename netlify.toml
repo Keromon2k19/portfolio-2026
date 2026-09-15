@@ -5,6 +5,17 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# Spanish 404 for anything missing under /es/ (existing files are never shadowed).
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404/index.html"
+  status = 404
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
