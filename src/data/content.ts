@@ -216,6 +216,8 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Delivered front-line customer service and technical support in a repair shop, handling intake and resolving issues for notebooks, PCs, and gaming consoles.",
             "Coordinated diagnosis, repair follow-up, customer updates, and delivery, improving satisfaction and repeat business.",
+            "Managed my own projects from quote to delivery: IT installations for local businesses and custom PC builds.",
+            "Set priorities and deadlines for the shop's repair work.",
           ],
         },
       ],
@@ -535,6 +537,11 @@ export const content: Record<Locale, SiteContent> = {
           issuer: "EF Education First",
           detail: "Score 90/100 on the CEFR-aligned reading and listening test.",
         },
+        {
+          name: "Pareto Talent Bootcamp",
+          issuer: "Pareto Talent",
+          detail: "Intensive program on AI, systems and operations for U.S. founders. In progress, Sep - Oct 2026.",
+        },
       ],
     },
     contact: {
@@ -647,6 +654,8 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Di atención al cliente y soporte técnico de primera línea en un local de reparación, gestionando la recepción y resolviendo casos de notebooks, PCs y consolas.",
             "Coordiné diagnóstico, seguimiento de reparación, avisos al cliente y entrega, mejorando la satisfacción y la recompra.",
+            "Llevé mis propios proyectos del presupuesto a la entrega: instalaciones informáticas para comercios y PCs armadas a medida.",
+            "Definí prioridades y plazos para los trabajos del taller.",
           ],
         },
       ],
@@ -965,6 +974,11 @@ export const content: Record<Locale, SiteContent> = {
           name: "EF SET English Certificate: C1 Advanced",
           issuer: "EF Education First",
           detail: "Puntaje 90/100 en el test de reading y listening alineado al MCER.",
+        },
+        {
+          name: "Pareto Talent Bootcamp",
+          issuer: "Pareto Talent",
+          detail: "Programa intensivo de IA, sistemas y operaciones para founders de EE.UU. En curso, Sep - Oct 2026.",
         },
       ],
     },
