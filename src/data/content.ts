@@ -146,7 +146,7 @@ export const content: Record<Locale, SiteContent> = {
       eyebrow: "Salesforce portfolio",
       title: "Salesforce Administrator & Developer",
       lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation.",
-      availability: "Remote from Argentina · Spanish native · English B2",
+      availability: "Remote from Argentina · Spanish native · English C1 (EF SET 90/100)",
       ctaProjects: "View projects",
       ctaCv: "Download CV",
       stats: [
@@ -191,6 +191,7 @@ export const content: Record<Locale, SiteContent> = {
           dates: "Nov 2024 - Apr 2025",
           place: "Remote",
           bullets: [
+            "Worked for a Salesforce architect and partner operating in the U.S., with teams in India and Latin America.",
             "Built and maintained custom data architecture for end-to-end business process tracking in a client org.",
             "Delivered a reporting and dashboards layer, rebuilt iteratively as requirements evolved across sprints.",
             "Implemented and tested Flow automations within a two-week Agile sprint cadence.",
@@ -324,7 +325,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remote (Nov 2024 - Apr 2025). Client work summarized without sensitive details. No public repo.",
+              "Remote (Nov 2024 - Apr 2025), for a Salesforce architect and partner operating in the U.S., with teams in India and Latin America. Client work summarized without sensitive details. No public repo.",
           },
         },
         {
@@ -529,6 +530,11 @@ export const content: Record<Locale, SiteContent> = {
           issuer: "Plataforma 5 - CloudGaia",
           detail: "Intensive admin & development training with real client delivery.",
         },
+        {
+          name: "EF SET English Certificate: C1 Advanced",
+          issuer: "EF Education First",
+          detail: "Score 90/100 on the CEFR-aligned reading and listening test.",
+        },
       ],
     },
     contact: {
@@ -571,7 +577,7 @@ export const content: Record<Locale, SiteContent> = {
       eyebrow: "Portfolio Salesforce",
       title: "Salesforce Administrator & Developer",
       lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación.",
-      availability: "Remoto desde Argentina · Español nativo · Inglés B2",
+      availability: "Remoto desde Argentina · Español nativo · Inglés C1 (EF SET 90/100)",
       ctaProjects: "Ver proyectos",
       ctaCv: "Descargar CV",
       stats: [
@@ -616,6 +622,7 @@ export const content: Record<Locale, SiteContent> = {
           dates: "Nov 2024 - Abr 2025",
           place: "Remoto",
           bullets: [
+            "Trabajé para un arquitecto y partner de Salesforce que operaba en EE.UU., con equipos en India y Latinoamérica.",
             "Construí y mantuve arquitectura de datos custom para el seguimiento de procesos de negocio en una org de cliente.",
             "Entregué una capa de reportes y dashboards, iterada a medida que evolucionaban los requerimientos.",
             "Implementé y probé automatizaciones con Flows en sprints Agile de dos semanas.",
@@ -749,7 +756,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remoto (Nov 2024 - Abr 2025). Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
+              "Remoto (Nov 2024 - Abr 2025), para un arquitecto y partner de Salesforce que operaba en EE.UU., con equipos en India y Latinoamérica. Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
           },
         },
         {
@@ -953,6 +960,11 @@ export const content: Record<Locale, SiteContent> = {
           name: "Salesforce Developer Bootcamp (800+ horas)",
           issuer: "Plataforma 5 - CloudGaia",
           detail: "Formación intensiva en administración y desarrollo con entrega a cliente real.",
+        },
+        {
+          name: "EF SET English Certificate: C1 Advanced",
+          issuer: "EF Education First",
+          detail: "Puntaje 90/100 en el test de reading y listening alineado al MCER.",
         },
       ],
     },

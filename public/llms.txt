@@ -1,6 +1,6 @@
 # Joaquin Haro Filippon
 
-> Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. Works remotely. Spanish native, English B2.
+> Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. Works remotely. Spanish native, English C1 (EF SET 90/100).
 
 Personal portfolio in English and Spanish: professional experience, selected Salesforce projects, skills, certifications and contact details.
 
@@ -26,6 +26,7 @@ Focus areas: Marketing Cloud, CRM data, Flow automation, reporting and technical
 - Salesforce Certified Associate
 - Marketing Cloud Essentials: Level 1 and Level 2
 - Salesforce Developer Bootcamp (800+ hours)
+- EF SET English Certificate: C1 Advanced (90/100)
 
 ## Profiles
 
