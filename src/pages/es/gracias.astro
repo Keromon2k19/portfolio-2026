@@ -1,11 +1,11 @@
 ---
 import SiteLayout from "../../components/SiteLayout.astro";
-import { content } from "../../data/content";
+import { content, shared } from "../../data/content";
 
 const c = content.es;
 ---
 
-<SiteLayout locale="es" c={c}>
+<SiteLayout locale="es" c={c} title={`Mensaje enviado | ${shared.name}`} noindex>
   <main id="main" class="mx-auto flex max-w-5xl flex-col items-start gap-4 px-4 py-24 sm:px-6">
     <h1 class="text-3xl font-bold text-navy">Mensaje enviado</h1>
     <p class="max-w-md text-slate">Gracias por escribirme. Te respondo lo antes posible.</p>

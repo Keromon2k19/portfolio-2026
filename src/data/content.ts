@@ -127,7 +127,7 @@ export const content: Record<Locale, SiteContent> = {
     meta: {
       title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
-        "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. CRM data, Flows, reporting, documentation, and web design.",
+        "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. Marketing Cloud, CRM data, Flows, and reporting.",
       path: "/",
       altPath: "/es/",
       altLabel: "Español",
@@ -146,7 +146,7 @@ export const content: Record<Locale, SiteContent> = {
       eyebrow: "Salesforce portfolio",
       title: "Salesforce Administrator & Developer",
       lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation.",
-      availability: "Remote from Argentina · Spanish native · English B2",
+      availability: "Remote from Argentina · Spanish native · English C1 (EF SET 90/100)",
       ctaProjects: "View projects",
       ctaCv: "Download CV",
       stats: [
@@ -191,6 +191,7 @@ export const content: Record<Locale, SiteContent> = {
           dates: "Nov 2024 - Apr 2025",
           place: "Remote",
           bullets: [
+            "Worked for a Salesforce architect and partner operating in the U.S., with teams in India and Latin America.",
             "Built and maintained custom data architecture for end-to-end business process tracking in a client org.",
             "Delivered a reporting and dashboards layer, rebuilt iteratively as requirements evolved across sprints.",
             "Implemented and tested Flow automations within a two-week Agile sprint cadence.",
@@ -215,6 +216,8 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Delivered front-line customer service and technical support in a repair shop, handling intake and resolving issues for notebooks, PCs, and gaming consoles.",
             "Coordinated diagnosis, repair follow-up, customer updates, and delivery, improving satisfaction and repeat business.",
+            "Managed my own projects from quote to delivery: IT installations for local businesses and custom PC builds.",
+            "Set priorities and deadlines for the shop's repair work.",
           ],
         },
       ],
@@ -324,7 +327,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remote (Nov 2024 - Apr 2025). Client work summarized without sensitive details. No public repo.",
+              "Remote (Nov 2024 - Apr 2025), for a Salesforce architect and partner operating in the U.S., with teams in India and Latin America. Client work summarized without sensitive details. No public repo.",
           },
         },
         {
@@ -529,6 +532,16 @@ export const content: Record<Locale, SiteContent> = {
           issuer: "Plataforma 5 - CloudGaia",
           detail: "Intensive admin & development training with real client delivery.",
         },
+        {
+          name: "EF SET English Certificate: C1 Advanced",
+          issuer: "EF Education First",
+          detail: "Score 90/100 on the CEFR-aligned reading and listening test.",
+        },
+        {
+          name: "Pareto Talent Bootcamp",
+          issuer: "Pareto Talent",
+          detail: "Intensive program on AI, systems and operations for U.S. founders. In progress, Sep - Oct 2026.",
+        },
       ],
     },
     contact: {
@@ -552,7 +565,7 @@ export const content: Record<Locale, SiteContent> = {
     meta: {
       title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
       description:
-        "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Datos CRM, Flows, reporting, documentación y diseño web.",
+        "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Marketing Cloud, datos CRM, Flows y reporting.",
       path: "/es/",
       altPath: "/",
       altLabel: "English",
@@ -571,7 +584,7 @@ export const content: Record<Locale, SiteContent> = {
       eyebrow: "Portfolio Salesforce",
       title: "Salesforce Administrator & Developer",
       lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación.",
-      availability: "Remoto desde Argentina · Español nativo · Inglés B2",
+      availability: "Remoto desde Argentina · Español nativo · Inglés C1 (EF SET 90/100)",
       ctaProjects: "Ver proyectos",
       ctaCv: "Descargar CV",
       stats: [
@@ -616,6 +629,7 @@ export const content: Record<Locale, SiteContent> = {
           dates: "Nov 2024 - Abr 2025",
           place: "Remoto",
           bullets: [
+            "Trabajé para un arquitecto y partner de Salesforce que operaba en EE.UU., con equipos en India y Latinoamérica.",
             "Construí y mantuve arquitectura de datos custom para el seguimiento de procesos de negocio en una org de cliente.",
             "Entregué una capa de reportes y dashboards, iterada a medida que evolucionaban los requerimientos.",
             "Implementé y probé automatizaciones con Flows en sprints Agile de dos semanas.",
@@ -640,6 +654,8 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Di atención al cliente y soporte técnico de primera línea en un local de reparación, gestionando la recepción y resolviendo casos de notebooks, PCs y consolas.",
             "Coordiné diagnóstico, seguimiento de reparación, avisos al cliente y entrega, mejorando la satisfacción y la recompra.",
+            "Llevé mis propios proyectos del presupuesto a la entrega: instalaciones informáticas para comercios y PCs armadas a medida.",
+            "Definí prioridades y plazos para los trabajos del taller.",
           ],
         },
       ],
@@ -749,7 +765,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remoto (Nov 2024 - Abr 2025). Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
+              "Remoto (Nov 2024 - Abr 2025), para un arquitecto y partner de Salesforce que operaba en EE.UU., con equipos en India y Latinoamérica. Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
           },
         },
         {
@@ -953,6 +969,16 @@ export const content: Record<Locale, SiteContent> = {
           name: "Salesforce Developer Bootcamp (800+ horas)",
           issuer: "Plataforma 5 - CloudGaia",
           detail: "Formación intensiva en administración y desarrollo con entrega a cliente real.",
+        },
+        {
+          name: "EF SET English Certificate: C1 Advanced",
+          issuer: "EF Education First",
+          detail: "Puntaje 90/100 en el test de reading y listening alineado al MCER.",
+        },
+        {
+          name: "Pareto Talent Bootcamp",
+          issuer: "Pareto Talent",
+          detail: "Programa intensivo de IA, sistemas y operaciones para founders de EE.UU. En curso, Sep - Oct 2026.",
         },
       ],
     },

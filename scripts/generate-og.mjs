@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { mkdirSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 
 const NAVY = "#032D60";
 const BLUE = "#0176D3";
@@ -33,6 +33,34 @@ await sharp(Buffer.from(ogSvg("Salesforce Administrator &amp; Developer", "Datos
   .toFile("public/og/og-es.png");
 
 await sharp(Buffer.from(iconSvg(180))).png().toFile("public/apple-touch-icon.png");
+await sharp(Buffer.from(iconSvg(192))).png().toFile("public/icon-192.png");
 await sharp(Buffer.from(iconSvg(512))).png().toFile("public/icon-512.png");
+
+// favicon.ico with PNG-encoded 16/32/48 frames (supported by every current browser).
+const icoFrames = await Promise.all(
+  [16, 32, 48].map(async (size) => ({
+    size,
+    buf: await sharp(Buffer.from(iconSvg(size))).png().toBuffer(),
+  })),
+);
+const icoHeader = Buffer.alloc(6);
+icoHeader.writeUInt16LE(1, 2);
+icoHeader.writeUInt16LE(icoFrames.length, 4);
+let icoOffset = 6 + 16 * icoFrames.length;
+const icoEntries = icoFrames.map(({ size, buf }) => {
+  const entry = Buffer.alloc(16);
+  entry.writeUInt8(size, 0);
+  entry.writeUInt8(size, 1);
+  entry.writeUInt16LE(1, 4);
+  entry.writeUInt16LE(32, 6);
+  entry.writeUInt32LE(buf.length, 8);
+  entry.writeUInt32LE(icoOffset, 12);
+  icoOffset += buf.length;
+  return entry;
+});
+writeFileSync(
+  "public/favicon.ico",
+  Buffer.concat([icoHeader, ...icoEntries, ...icoFrames.map((f) => f.buf)]),
+);
 
 console.log("OG images and icons generated");

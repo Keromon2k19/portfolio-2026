@@ -1,0 +1,40 @@
+# Joaquin Haro Filippon
+
+> Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. Works remotely. Spanish native, English C1 (EF SET 90/100).
+
+Personal portfolio in English and Spanish: professional experience, selected Salesforce projects, skills, certifications and contact details.
+
+Focus areas: Marketing Cloud, CRM data, Flow automation, reporting and technical documentation.
+
+## Portfolio
+
+- [Portfolio (English)](https://joaquinharofilipponportfolio.netlify.app/): experience, projects, skills, certifications and contact
+- [Portfolio (Español)](https://joaquinharofilipponportfolio.netlify.app/es/): the same content in Spanish
+- [CV 2026 (PDF)](https://joaquinharofilipponportfolio.netlify.app/docs/joaquin-haro-filippon-salesforce-cv-2026.pdf): full resume
+
+## Selected projects
+
+- Marketing Cloud Next Implementation Guide
+- Quoting & Localization Support
+- Reporting & Automation Layer
+- CloudConsulting Project Management App
+- E-Learning Platform
+- Recuerdos de Cobre
+
+## Certifications & training
+
+- Salesforce Certified Associate
+- Marketing Cloud Essentials: Level 1 and Level 2
+- Salesforce Developer Bootcamp (800+ hours)
+- EF SET English Certificate: C1 Advanced (90/100)
+- Pareto Talent Bootcamp: AI, systems and operations (in progress)
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/joaquin-haro-filippon-a05967191/)
+- [GitHub](https://github.com/Keromon2k19)
+- [Salesforce Trailblazer](https://www.salesforce.com/trailblazer/jharofilippon)
+
+## Contact
+
+- Email: joaquinharofilippon@gmail.com
