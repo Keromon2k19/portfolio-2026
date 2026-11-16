@@ -1,6 +1,6 @@
 # Joaquin Haro Filippon | Portfolio
 
-Bilingual (EN/ES) portfolio for a Salesforce Administrator & Developer.
+Bilingual (EN/ES) portfolio for a Salesforce Consultant.
 Static site: zero framework JavaScript, Salesforce-inspired palette.
 
 **Live:** https://joaquinharofilipponportfolio.netlify.app/

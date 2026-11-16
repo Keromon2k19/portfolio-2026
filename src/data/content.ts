@@ -125,9 +125,9 @@ export interface SiteContent {
 export const content: Record<Locale, SiteContent> = {
   en: {
     meta: {
-      title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
+      title: "Joaquin Haro Filippon | Salesforce Consultant",
       description:
-        "Salesforce Administrator & Developer from Argentina, grounded in a decade of customer and technical support. CRM data, Flows, reporting, documentation, and web design.",
+        "Salesforce Consultant from Argentina: platform, Apex, Marketing Cloud Next and Data 360, grounded in a decade of customer and technical support.",
       path: "/",
       altPath: "/es/",
       altLabel: "Español",
@@ -144,14 +144,14 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Salesforce portfolio",
-      title: "Salesforce Administrator & Developer",
-      lead: "I build CRM systems teams can actually operate: clean data models, Flow automation, reporting, and documentation.",
-      availability: "Remote from Argentina · Spanish native · English B2",
+      title: "Salesforce Consultant",
+      lead: "I turn what the client needs into Salesforce work the team can deliver: clean data models, Flows, Apex, Marketing Cloud Next, and Data 360.",
+      availability: "Remote from Argentina · Spanish native · English C1 (EF SET 90/100)",
       ctaProjects: "View projects",
       ctaCv: "Download CV",
       stats: [
         { value: "10 years", label: "in customer & technical support" },
-        { value: "1+ year", label: "hands-on Salesforce experience" },
+        { value: "3 years", label: "of Salesforce project experience" },
         { value: "3", label: "Salesforce & Marketing Cloud credentials" },
       ],
     },
@@ -160,40 +160,19 @@ export const content: Record<Locale, SiteContent> = {
       title: "Salesforce work, built on a decade of support",
       items: [
         {
-          role: "Marketing Cloud Consultant",
+          role: "Salesforce Consultant",
           company: "Esphera Consulting",
-          dates: "Jun 2026 - Aug 2026",
-          place: "Remote",
+          dates: "2023 - Aug 2026",
+          place: "Remote · Platform, Marketing Cloud Next and Data 360",
           bullets: [
-            "Authored the end-to-end Marketing Cloud Next implementation procedure used by the delivery team: 167 pages, 13 sequential chapters and 3 annexes, contrasted against official Salesforce documentation.",
-            "Documented Data 360 enablement, Data Kits and Data Streams, DLO-to-DMO mapping, and Identity Resolution rulesets.",
-            "Specified email domain authentication (SPF, DKIM, DMARC) and IP warm-up, the WhatsApp channel via WABA and Meta templates, and consent handling through Preference Manager.",
-            "Defined a five-level decision classification separating product requirements, implementation-route requirements, project decisions, and recommendations.",
-            "Built a go-live protocol around a controlled first microcohort, with named owners, stop criteria, and an auditable implementation log.",
-          ],
-        },
-        {
-          role: "Salesforce Administrator",
-          company: "InCompany",
-          dates: "Nov 2025 - May 2026",
-          place: "Remote · Internship",
-          bullets: [
-            "Audited and corrected record data across multiple objects, resolving inconsistencies and duplicates to restore reporting integrity.",
-            "Designed and deployed custom objects and fields to model quoting and operational workflows.",
-            "Restructured Account page layouts for sales and ops teams, surfacing critical data earlier in the view.",
-            "Wrote end-to-end documentation for a production quoting system used daily by non-technical teams.",
-            "Localized the org into Spanish: custom labels, field names, and UI components.",
-          ],
-        },
-        {
-          role: "Salesforce Developer & Administrator",
-          company: "CloudAvengers",
-          dates: "Nov 2024 - Apr 2025",
-          place: "Remote",
-          bullets: [
-            "Built and maintained custom data architecture for end-to-end business process tracking in a client org.",
-            "Delivered a reporting and dashboards layer, rebuilt iteratively as requirements evolved across sprints.",
-            "Implemented and tested Flow automations within a two-week Agile sprint cadence.",
+            "Designed the complete Marketing Cloud Next implementation methodology adopted by the delivery team: 13 sequential chapters, from provisioning to go-live, checked against the official Salesforce documentation.",
+            "Worked with the team to enable Data 360: Data Streams and Data Kits, DLO to DMO mapping, and Identity Resolution rulesets to build a unified customer profile.",
+            "Turned marketing requirements into segments and audiences for email and WhatsApp journeys, and launched the WhatsApp Business (WABA) channel with Consent & Preference Manager.",
+            "Documented email deliverability (SPF, DKIM, DMARC and IP warm-up) and took part in planning a phased go-live with owners, exit criteria, and an auditable implementation log.",
+            "Audited and corrected data across multiple objects, restoring the integrity of production reports.",
+            "Helped create custom objects and fields for quoting and operations, restructured Account page layouts, and localized the org metadata into Spanish.",
+            "Developed in Apex with REST API, SOQL, Triggers, Agentforce, and Agent Script, using CI/CD.",
+            "Helped build reports and dashboards for client stakeholders, implemented and tested Flow automation, and created profiles and permission sets for role-based access.",
           ],
         },
         {
@@ -215,6 +194,8 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Delivered front-line customer service and technical support in a repair shop, handling intake and resolving issues for notebooks, PCs, and gaming consoles.",
             "Coordinated diagnosis, repair follow-up, customer updates, and delivery, improving satisfaction and repeat business.",
+            "Managed my own projects from quote to delivery: IT installations for local businesses and custom PC builds.",
+            "Set priorities and deadlines for the shop's repair work.",
           ],
         },
       ],
@@ -271,7 +252,7 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           name: "Quoting & Localization Support",
-          type: "Production org · InCompany",
+          type: "Production org · Esphera Consulting",
           problem:
             "Sales and ops teams needed cleaner record data, documentation for their quoting system, and a Spanish interface.",
           solution:
@@ -280,7 +261,7 @@ export const content: Record<Locale, SiteContent> = {
             "Non-technical users got a clear operating reference, and reporting became easier to trust.",
           details: {
             overview:
-              "A production Salesforce org for InCompany's sales and ops teams, focused on cleaner data, a documented quoting system, and a Spanish interface.",
+              "A production Salesforce org for a client's sales and ops teams, focused on cleaner data, a documented quoting system, and a Spanish interface.",
             highlights: [
               "Designed and deployed custom objects and fields to model quoting and operational workflows.",
               "Restructured Account page layouts to surface critical data earlier in daily use.",
@@ -297,12 +278,12 @@ export const content: Record<Locale, SiteContent> = {
               "Documentation",
             ],
             context:
-              "Internship, remote (Nov 2025 - May 2026). Private production work, summarized without client data. No public repo.",
+              "Client project at Esphera Consulting, remote. Private production work, summarized without client data. No public repo.",
           },
         },
         {
           name: "Reporting & Automation Layer",
-          type: "Client org · CloudAvengers",
+          type: "Client org · Esphera Consulting",
           problem:
             "Stakeholders needed reliable visibility into operational metrics while requirements kept evolving.",
           solution:
@@ -324,7 +305,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remote (Nov 2024 - Apr 2025). Client work summarized without sensitive details. No public repo.",
+              "Client project at Esphera Consulting, remote, in a two-week Agile cadence. Client work summarized without sensitive details. No public repo.",
           },
         },
         {
@@ -424,6 +405,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           name: "Salesforce Platform",
           items: [
+            "Sales Cloud",
             "Custom objects & fields",
             "Page layouts",
             "Flows & process automation",
@@ -438,7 +420,7 @@ export const content: Record<Locale, SiteContent> = {
           items: [
             "Data quality & record correction",
             "Data management",
-            "Segmentation support",
+            "Requirements gathering",
             "Systems documentation",
             "Stakeholder communication",
           ],
@@ -448,21 +430,25 @@ export const content: Record<Locale, SiteContent> = {
           items: [
             "Apex",
             "SOQL",
-            "Integration fundamentals",
-            "Custom business logic",
-            "Declarative automation",
+            "Triggers",
+            "Lightning Web Components (LWC)",
+            "REST API integrations",
+            "Agentforce & Agent Script",
+            "CI/CD",
+            "Git versioning",
           ],
         },
         {
-          name: "Marketing Cloud",
+          name: "Marketing Cloud & Data 360",
           items: [
             "Marketing Cloud Next",
-            "Data 360",
-            "Identity Resolution",
+            "Data Streams & Data Kits",
+            "DLO to DMO mapping",
+            "Identity Resolution & unified profile",
+            "Segmentation & activation",
+            "Email & WhatsApp / WABA journeys",
             "Consent & Preference Manager",
-            "Email deliverability (SPF, DKIM, DMARC)",
-            "WhatsApp / WABA",
-            "Audience Flows & segmentation",
+            "Email deliverability (SPF, DKIM, DMARC, IP warm-up)",
             "Email Studio & Journey Builder",
           ],
         },
@@ -516,12 +502,12 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           name: "Marketing Cloud Essentials: Level 1",
-          issuer: "Orange Academy",
+          issuer: "The Orange Academy",
           detail: "Email Studio and Marketing Cloud fundamentals.",
         },
         {
           name: "Marketing Cloud Essentials: Level 2",
-          issuer: "Orange Academy",
+          issuer: "The Orange Academy",
           detail: "Journey design and applied Marketing Cloud practice.",
         },
         {
@@ -529,12 +515,22 @@ export const content: Record<Locale, SiteContent> = {
           issuer: "Plataforma 5 - CloudGaia",
           detail: "Intensive admin & development training with real client delivery.",
         },
+        {
+          name: "EF SET English Certificate: C1 Advanced",
+          issuer: "EF Education First",
+          detail: "Score 90/100 on the CEFR-aligned reading and listening test.",
+        },
+        {
+          name: "Pareto Talent Bootcamp",
+          issuer: "Pareto Talent",
+          detail: "Intensive program on AI, systems and operations for U.S. founders (Sep - Oct 2026).",
+        },
       ],
     },
     contact: {
       kicker: "Contact",
       title: "Let's talk Salesforce",
-      body: "Best fit: Salesforce Admin/Developer roles. Also open to customer & technical support and web work.",
+      body: "Best fit: Salesforce Consultant, Admin, and Developer roles. Also open to customer & technical support and web work.",
       directTitle: "Direct links",
       form: {
         name: "Name",
@@ -550,9 +546,9 @@ export const content: Record<Locale, SiteContent> = {
   },
   es: {
     meta: {
-      title: "Joaquin Haro Filippon | Salesforce Administrator & Developer",
+      title: "Joaquin Haro Filippon | Salesforce Consultant",
       description:
-        "Salesforce Administrator & Developer desde Argentina, con una década de atención al cliente y soporte técnico. Datos CRM, Flows, reporting, documentación y diseño web.",
+        "Salesforce Consultant desde Argentina: plataforma, Apex, Marketing Cloud Next y Data 360, con una década de atención al cliente y soporte técnico.",
       path: "/es/",
       altPath: "/",
       altLabel: "English",
@@ -569,14 +565,14 @@ export const content: Record<Locale, SiteContent> = {
     },
     hero: {
       eyebrow: "Portfolio Salesforce",
-      title: "Salesforce Administrator & Developer",
-      lead: "Construyo sistemas CRM que los equipos pueden operar de verdad: modelos de datos limpios, automatización con Flows, reporting y documentación.",
-      availability: "Remoto desde Argentina · Español nativo · Inglés B2",
+      title: "Salesforce Consultant",
+      lead: "Entiendo lo que necesita el cliente y lo bajo a trabajo Salesforce que el equipo puede ejecutar: modelos de datos limpios, Flows, Apex, Marketing Cloud Next y Data 360.",
+      availability: "Remoto desde Argentina · Español nativo · Inglés C1 (EF SET 90/100)",
       ctaProjects: "Ver proyectos",
       ctaCv: "Descargar CV",
       stats: [
         { value: "10 años", label: "en atención al cliente y soporte técnico" },
-        { value: "1+ año", label: "de experiencia práctica en Salesforce" },
+        { value: "3 años", label: "de experiencia en proyectos Salesforce" },
         { value: "3", label: "credenciales Salesforce y Marketing Cloud" },
       ],
     },
@@ -585,40 +581,19 @@ export const content: Record<Locale, SiteContent> = {
       title: "Trabajo Salesforce, sobre una década de soporte",
       items: [
         {
-          role: "Marketing Cloud Consultant",
+          role: "Salesforce Consultant",
           company: "Esphera Consulting",
-          dates: "Jun 2026 - Ago 2026",
-          place: "Remoto",
+          dates: "2023 - Ago 2026",
+          place: "Remoto · Plataforma, Marketing Cloud Next y Data 360",
           bullets: [
-            "Escribí el procedimiento end-to-end de implementación de Marketing Cloud Next usado por el equipo de delivery: 167 páginas, 13 capítulos secuenciales y 3 anexos, contrastados con la documentación oficial de Salesforce.",
-            "Documenté la habilitación de Data 360, Data Kits y Data Streams, el mapeo DLO a DMO y los rulesets de Identity Resolution.",
-            "Especifiqué la autenticación del dominio de email (SPF, DKIM, DMARC) y el calentamiento de IP, el canal de WhatsApp vía WABA y templates de Meta, y el manejo del consentimiento con Preference Manager.",
-            "Definí una clasificación de decisiones de cinco niveles que separa requisitos del producto, requisitos de la ruta de implementación, decisiones del proyecto y recomendaciones.",
-            "Armé un protocolo de go-live sobre una primera microcohorte controlada, con responsables, criterios de detención y un registro de implementación auditable.",
-          ],
-        },
-        {
-          role: "Salesforce Administrator",
-          company: "InCompany",
-          dates: "Nov 2025 - May 2026",
-          place: "Remoto · Pasantía",
-          bullets: [
-            "Audité y corregí datos de registros en múltiples objetos, resolviendo inconsistencias y duplicados para restaurar la integridad del reporting.",
-            "Diseñé y desplegué objetos y campos custom para modelar flujos de cotización y operaciones.",
-            "Reestructuré page layouts de Account para ventas y operaciones, priorizando los datos críticos.",
-            "Escribí documentación end-to-end de un sistema de cotizaciones en producción, usado a diario por equipos no técnicos.",
-            "Localicé la org al español: custom labels, nombres de campos y componentes de UI.",
-          ],
-        },
-        {
-          role: "Salesforce Developer & Administrator",
-          company: "CloudAvengers",
-          dates: "Nov 2024 - Abr 2025",
-          place: "Remoto",
-          bullets: [
-            "Construí y mantuve arquitectura de datos custom para el seguimiento de procesos de negocio en una org de cliente.",
-            "Entregué una capa de reportes y dashboards, iterada a medida que evolucionaban los requerimientos.",
-            "Implementé y probé automatizaciones con Flows en sprints Agile de dos semanas.",
+            "Diseñé la metodología completa de implementación de Marketing Cloud Next adoptada por el equipo de delivery: 13 capítulos secuenciales, desde el aprovisionamiento hasta la salida a producción, contrastados con la documentación oficial de Salesforce.",
+            "Colaboré con el equipo en la habilitación de Data 360: Data Streams y Data Kits, mapeo de DLO a DMO y rulesets de Identity Resolution para obtener un perfil unificado del cliente.",
+            "Traduje los requerimientos de marketing en segmentos y audiencias para journeys de email y WhatsApp, y puse en marcha el canal de WhatsApp Business (WABA) con Consent & Preference Manager.",
+            "Documenté la entregabilidad de correo (SPF, DKIM, DMARC e IP warm-up) y formé parte de la planificación de la salida a producción por etapas, con responsables, criterios de salida y bitácora auditable.",
+            "Audité y corregí los datos de múltiples objetos y restituí la integridad de los reportes en producción.",
+            "Participé en la creación de objetos y campos para cotización y operaciones, reestructuré los page layouts de Cuentas y localicé los metadatos de la org al español.",
+            "Desarrollé en Apex con REST API, SOQL, Triggers, Agentforce y Agent Script, usando CI/CD.",
+            "Colaboré en la capa de reportes y tableros para los stakeholders del cliente, implementé y probé automatizaciones con Flows y creé perfiles y permission sets para el acceso por rol.",
           ],
         },
         {
@@ -640,6 +615,8 @@ export const content: Record<Locale, SiteContent> = {
           bullets: [
             "Di atención al cliente y soporte técnico de primera línea en un local de reparación, gestionando la recepción y resolviendo casos de notebooks, PCs y consolas.",
             "Coordiné diagnóstico, seguimiento de reparación, avisos al cliente y entrega, mejorando la satisfacción y la recompra.",
+            "Llevé mis propios proyectos del presupuesto a la entrega: instalaciones informáticas para comercios y PCs armadas a medida.",
+            "Definí prioridades y plazos para los trabajos del taller.",
           ],
         },
       ],
@@ -696,7 +673,7 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           name: "Quoting & Localization Support",
-          type: "Org en producción · InCompany",
+          type: "Org en producción · Esphera Consulting",
           problem:
             "Ventas y operaciones necesitaban datos más limpios, documentación del sistema de cotizaciones y una interfaz en español.",
           solution:
@@ -705,7 +682,7 @@ export const content: Record<Locale, SiteContent> = {
             "Los usuarios no técnicos ganaron una referencia clara de operación y el reporting se volvió confiable.",
           details: {
             overview:
-              "Una org Salesforce en producción para los equipos de ventas y operaciones de InCompany, enfocada en datos más limpios, un sistema de cotizaciones documentado y una interfaz en español.",
+              "Una org Salesforce en producción para los equipos de ventas y operaciones de un cliente, enfocada en datos más limpios, un sistema de cotizaciones documentado y una interfaz en español.",
             highlights: [
               "Diseñé y desplegué objetos y campos custom para modelar los flujos de cotización y operaciones.",
               "Reestructuré page layouts de Account para priorizar los datos críticos en el uso diario.",
@@ -722,12 +699,12 @@ export const content: Record<Locale, SiteContent> = {
               "Documentación",
             ],
             context:
-              "Pasantía, remoto (Nov 2025 - May 2026). Trabajo privado en producción, resumido sin datos del cliente. Sin repo público.",
+              "Proyecto de cliente en Esphera Consulting, remoto. Trabajo privado en producción, resumido sin datos del cliente. Sin repo público.",
           },
         },
         {
           name: "Reporting & Automation Layer",
-          type: "Org de cliente · CloudAvengers",
+          type: "Org de cliente · Esphera Consulting",
           problem:
             "Los stakeholders necesitaban visibilidad confiable de métricas operativas con requerimientos en evolución.",
           solution:
@@ -749,7 +726,7 @@ export const content: Record<Locale, SiteContent> = {
               "Agile / Scrum",
             ],
             context:
-              "Remoto (Nov 2024 - Abr 2025). Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
+              "Proyecto de cliente en Esphera Consulting, remoto, en sprints Agile de dos semanas. Trabajo de cliente resumido sin detalles sensibles. Sin repo público.",
           },
         },
         {
@@ -849,6 +826,7 @@ export const content: Record<Locale, SiteContent> = {
         {
           name: "Salesforce Platform",
           items: [
+            "Sales Cloud",
             "Objetos y campos custom",
             "Page layouts",
             "Flows y automatización",
@@ -863,7 +841,7 @@ export const content: Record<Locale, SiteContent> = {
           items: [
             "Calidad de datos y corrección de registros",
             "Gestión de datos",
-            "Soporte de segmentación",
+            "Relevamiento de requerimientos",
             "Documentación de sistemas",
             "Comunicación con stakeholders",
           ],
@@ -873,21 +851,25 @@ export const content: Record<Locale, SiteContent> = {
           items: [
             "Apex",
             "SOQL",
-            "Fundamentos de integración",
-            "Lógica de negocio custom",
-            "Automatización declarativa",
+            "Triggers",
+            "Lightning Web Components (LWC)",
+            "Integraciones con APIs REST",
+            "Agentforce y Agent Script",
+            "CI/CD",
+            "Versionado con Git",
           ],
         },
         {
-          name: "Marketing Cloud",
+          name: "Marketing Cloud y Data 360",
           items: [
             "Marketing Cloud Next",
-            "Data 360",
-            "Identity Resolution",
-            "Consentimiento y Preference Manager",
-            "Entregabilidad de email (SPF, DKIM, DMARC)",
-            "WhatsApp / WABA",
-            "Audience Flows y segmentación",
+            "Data Streams y Data Kits",
+            "Mapeo de DLO a DMO",
+            "Identity Resolution y perfil unificado",
+            "Segmentación y activación",
+            "Journeys de email y WhatsApp / WABA",
+            "Consent & Preference Manager",
+            "Entregabilidad de email (SPF, DKIM, DMARC, IP warm-up)",
             "Email Studio y Journey Builder",
           ],
         },
@@ -941,12 +923,12 @@ export const content: Record<Locale, SiteContent> = {
         },
         {
           name: "Marketing Cloud Essentials: Nivel 1",
-          issuer: "Orange Academy",
+          issuer: "The Orange Academy",
           detail: "Fundamentos de Email Studio y Marketing Cloud.",
         },
         {
           name: "Marketing Cloud Essentials: Nivel 2",
-          issuer: "Orange Academy",
+          issuer: "The Orange Academy",
           detail: "Diseño de journeys y práctica aplicada en Marketing Cloud.",
         },
         {
@@ -954,12 +936,22 @@ export const content: Record<Locale, SiteContent> = {
           issuer: "Plataforma 5 - CloudGaia",
           detail: "Formación intensiva en administración y desarrollo con entrega a cliente real.",
         },
+        {
+          name: "EF SET English Certificate: C1 Advanced",
+          issuer: "EF Education First",
+          detail: "Puntaje 90/100 en el test de reading y listening alineado al MCER.",
+        },
+        {
+          name: "Pareto Talent Bootcamp",
+          issuer: "Pareto Talent",
+          detail: "Programa intensivo de IA, sistemas y operaciones para founders de EE.UU. (Sep - Oct 2026).",
+        },
       ],
     },
     contact: {
       kicker: "Contacto",
       title: "Hablemos de Salesforce",
-      body: "Mejor fit: roles Salesforce Admin/Developer. También abierto a atención al cliente, soporte técnico y trabajo web.",
+      body: "Mejor fit: roles Salesforce Consultant, Admin y Developer. También abierto a atención al cliente, soporte técnico y trabajo web.",
       directTitle: "Links directos",
       form: {
         name: "Nombre",
