@@ -24,11 +24,11 @@ function iconSvg(size) {
 
 mkdirSync("public/og", { recursive: true });
 
-await sharp(Buffer.from(ogSvg("Salesforce Administrator &amp; Developer", "CRM data · Flows · Reporting · Documentation")))
+await sharp(Buffer.from(ogSvg("Salesforce Consultant", "Platform · Apex · Marketing Cloud Next · Data 360")))
   .png()
   .toFile("public/og/og-en.png");
 
-await sharp(Buffer.from(ogSvg("Salesforce Administrator &amp; Developer", "Datos CRM · Flows · Reporting · Documentación")))
+await sharp(Buffer.from(ogSvg("Salesforce Consultant", "Plataforma · Apex · Marketing Cloud Next · Data 360")))
   .png()
   .toFile("public/og/og-es.png");
 
