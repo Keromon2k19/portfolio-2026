@@ -82,8 +82,8 @@ CV = {
                     "Took part in planning a phased go-live with Agile methods: assigned owners, stop "
                     "and exit criteria, and an auditable implementation log.",
                     "Proposed a five-level decision classification (product requirement, "
-                    "implementation-route requirement, project decision, recommendation, and pending "
-                    "validation) that reduced ambiguity in the handoff to the technical team.",
+                    "implementation-route requirement, project decision, recommendation, and "
+                    "conditional) that reduced ambiguity in the handoff to the technical team.",
                 ],
             ),
             (

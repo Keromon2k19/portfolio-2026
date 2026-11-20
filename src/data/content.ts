@@ -228,7 +228,7 @@ export const content: Record<Locale, SiteContent> = {
               "A Spanish-language operating procedure for implementing Marketing Cloud Next on Data 360: from design approval and permissions through to go-live and initial monitoring, contrasted against official Salesforce documentation.",
             highlights: [
               "Structured the full path into 13 sequential chapters plus annexes, each sealed by an exit criterion that has to pass before the next one starts.",
-              "Built a five-level classification separating what Salesforce imposes, what this implementation route requires, what the project has to decide, and what the guide only recommends.",
+              "Built a five-level classification separating what Salesforce imposes, what this implementation route requires, what the project has to decide, what the guide only recommends, and what applies only under certain conditions.",
               "Documented Data 360 enablement, Data Kits and Data Streams, DLO-to-DMO mapping, and Identity Resolution rulesets.",
               "Covered email domain authentication (SPF, DKIM, DMARC) and IP warm-up, plus the WhatsApp branch through WABA and Meta templates.",
               "Specified consent handling and Preference Manager, including two alternative routes for feeding consent and how to govern their combination.",
@@ -649,7 +649,7 @@ export const content: Record<Locale, SiteContent> = {
               "Un procedimiento operativo en español para implementar Marketing Cloud Next sobre Data 360: desde la aprobación del diseño y los permisos hasta el go-live y el monitoreo inicial, contrastado con la documentación oficial de Salesforce.",
             highlights: [
               "Estructuré el recorrido completo en 13 capítulos secuenciales más anexos, cada uno cerrado por un criterio de salida que debe cumplirse antes de arrancar el siguiente.",
-              "Definí una clasificación de cinco niveles que separa lo que impone Salesforce, lo que exige esta ruta de implementación, lo que debe decidir el proyecto y lo que la guía solo recomienda.",
+              "Definí una clasificación de cinco niveles que separa lo que impone Salesforce, lo que exige esta ruta de implementación, lo que debe decidir el proyecto, lo que la guía solo recomienda y lo que aplica solo en ciertas condiciones.",
               "Documenté la habilitación de Data 360, Data Kits y Data Streams, el mapeo DLO a DMO y los rulesets de Identity Resolution.",
               "Cubrí la autenticación del dominio de email (SPF, DKIM, DMARC) y el calentamiento de IP, más la rama de WhatsApp vía WABA y templates de Meta.",
               "Especifiqué el manejo del consentimiento y Preference Manager, con dos rutas alternativas de alimentación y cómo gobernar su combinación.",
